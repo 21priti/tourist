@@ -38,7 +38,7 @@
               <a class="nav-link" href=""><i class="bi bi-vector-pen"></i> Blog</a>
             </li>
           </ul>
-          <span class="navbar-text me-2">
+          <span class="navbar-text me-3">
             <ul class="navbar-nav">
             <!-- <a href="#" class="btn btn-primary text-light fs-5">Profile</a> -->
             <li class="nav-item dropdown fw-bold">
