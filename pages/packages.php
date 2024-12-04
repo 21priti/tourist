@@ -14,7 +14,7 @@
     <div class="container-fluid rounded shadow-sm">
         <div class="row p-3">
             <div class="col-md-6">
-                <img src="./image/images (2).jpg" class="img-fluid w-100">
+                <img src="../image/images (2).jpg" class="img-fluid w-100">
             </div>
             <div class="col-md-6 py-5">
                 <h1 class="text-primary fw-bold">Discover Your Next Adventure!</h1>
@@ -34,7 +34,7 @@
                     <h4>Puri</h4>
 </div>
 <div class="col-md-4">
-<img src="./image/images (2).jpg" class="img-fluid">
+<img src="../image/images (2).jpg" class="img-fluid">
 </div>
 </div>
     <div class="row border border-1">
@@ -42,7 +42,7 @@
                     <h4>Puri</h4>
 </div>
 <div class="col-md-4">
-<img src="./image/images (2).jpg" class="img-fluid">
+<img src="../image/images (2).jpg" class="img-fluid">
 </div>
 </div>
 
@@ -51,7 +51,7 @@
                     <h4>Puri</h4>
 </div>
 <div class="col-md-4">
-<img src="./image/images (2).jpg" class="img-fluid">
+<img src="../image/images (2).jpg" class="img-fluid">
 </div>
 </div>
 </div>
