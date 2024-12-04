@@ -23,7 +23,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav mx-auto mb-lg-0 fw-bold">
             <li class="nav-item px-3">
-              <a class="nav-link active" aria-current="page" href=""><i class="bi bi-house-fill"></i> Home</a>
+              <a class="nav-link active" aria-current="page" href="home.php"><i class="bi bi-house-fill"></i> Home</a>
             </li>
             <li class="nav-item px-3">
               <a class="nav-link" href=""><i class="bi bi-file-person-fill"></i> About</a>
@@ -35,7 +35,7 @@
               <a class="nav-link" href=""><i class="bi bi-pin-map-fill"></i> Places</a>
             </li>
             <li class="nav-item px-3">
-              <a class="nav-link" href=""><i class="bi bi-vector-pen"></i> Blog</a>
+              <a class="nav-link" href="blog.php"><i class="bi bi-vector-pen"></i> Blog</a>
             </li>
           </ul>
           <span class="navbar-text me-2">
