@@ -15,6 +15,23 @@
             height:400px;
             width: 450px;
         }
+  
+
+        #slider-wrapper {
+            position: relative;
+        }
+
+
+        .slider {
+            display: flex;
+            transition: transform 1s ease-in-out;
+        }
+        .container-fluid {
+            flex: 0 0 100%; /* Each slide takes full width */
+            
+        }
+
+
         </style>
 </head>
 <body>
@@ -22,10 +39,11 @@
 require_once "navbar.php"
 ?>
 
-      
-    <div class="container p-4 mt-5" id="main">
+<div id="slider-wrapper">
+<div class="slider"> 
+    <div class="container-fluid p-4 mt-5 ms-3" id="main">
         <div class="row ">
-            <div class="col-md-7 py-5 ps-4">
+            <div class="col-md-8 py-5 ps-4">
             <h1 class="text-light fw-bold">A Journey Beyond Expectations</h1>
                 <p class="fs-5 fst-italic text-light mt-5">
                     "Using this website has been a breath of fresh air! The interface is clean, modern, and incredibly easy to navigate. 
@@ -35,14 +53,14 @@ require_once "navbar.php"
     </p>
     <a href="#" class="btn btn-warning mt-3 text-decoration-none rounded-3 fw-bold fs-4 p-2">See More</a>
 </div>
-<div class="col-md-5">
+<div class="col-md-4">
     <image src="./image/profilepic4.webp" class=" img-fluid rounded-5" id="img">
 </div>
 </div>
     </div>
-<div class="container p-4 mt-5" id="main">
+<div class="container-fluid p-4 mt-5 ms-3" id="main">
 <div class="row">
-            <div class="col-md-7 py-5 ps-4">
+            <div class="col-md-8 py-5 ps-4">
             <h1 class="text-light fw-bold">What Our Customers Love About Us</h1>
                 <p class="fs-5 fst-italic text-light mt-5">
                     "There’s so much to love about this platform! The customer support team is nothing short of amazing—they’re quick to 
@@ -52,14 +70,14 @@ require_once "navbar.php"
     </p>
     <a href="#" class="btn btn-warning mt-3 text-decoration-none rounded-3 fw-bold fs-4 p-2">See More</a>
 </div>
-<div class="col-md-5">
+<div class="col-md-4">
     <image src="./image/profilepic3.webp" class=" img-fluid rounded-5" id="img">
 </div>
 </div>
 </div>
-<div class="container p-4 mt-5" id="main">
+<div class="container-fluid p-4 mt-5 ms-3 " id="main">
 <div class="row">
-            <div class="col-md-7 py-5 ps-4">
+            <div class="col-md-8 py-5 ps-4">
             <h1 class="text-light fw-bold">Real Stories, Real Impact</h1>
                 <p class="fs-5 fst-italic text-light mt-5">
                     "This platform has truly transformed how I approach my daily tasks. It’s not just a service—it feels like a partner that 
@@ -69,14 +87,14 @@ require_once "navbar.php"
     </p>
     <a href="#" class="btn btn-warning mt-3 text-decoration-none rounded-3 fw-bold fs-4 p-2">See More</a>
 </div>
-<div class="col-md-5">
+<div class="col-md-4">
     <image src="./image/profilepic2.avif" class=" img-fluid rounded-5" id="img">
 </div>
 </div>
 </div>
-<div class="container p-4 mt-5" id="main">
+<div class="container-fluid p-4 mt-5 ms-3" id="main">
 <div class="row">
-            <div class="col-md-7 py-5 ps-4">
+            <div class="col-md-8 py-5 ps-4">
             <h1 class="text-light fw-bold">Your Voice, Our Inspiration</h1>
                 <p class="fs-5 fst-italic text-light mt-5">
                     "What I admire most about this platform is how much they listen to their users. I’ve seen updates that directly reflect customer 
@@ -85,12 +103,31 @@ require_once "navbar.php"
     </p>
     <a href="#" class="btn btn-warning mt-3 text-decoration-none rounded-3 fw-bold fs-4 p-2">See More</a>
 </div>
-<div class="col-md-5">
+<div class="col-md-4">
     <image src="./image/profilepic1.avif" class=" img-fluid rounded-5" id="img">
 </div>
 </div>
 </div>
 
+    </div>
+    </div>
+<script>
+    const slider = document.querySelector(".slider");
+    const slides = document.querySelectorAll(".container-fluid");
+    let currentIndex = 0;
+
+    function slideNext() {
+    // Calculate the new translateX value
+        const offset = -(currentIndex * 100);
+        slider.style.transform = `translateX(${offset}%)`;
+
+        // Move to the next slide, loop back if at the end
+        currentIndex = (currentIndex + 1) % (slides.length-1);
+}
+
+    // Start the sliding effect with a time interval
+    setInterval(slideNext, 2000); // Change slide every 3 seconds
+</script>
 
 </body>
 </html>
