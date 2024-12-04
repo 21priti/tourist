@@ -1,0 +1,20 @@
+/* blog style */
+#main{
+    background-color: rgb(21, 21, 74);
+}
+#img{
+    height:400px;
+    width: 450px;
+}
+#slider-wrapper {
+    position: relative;
+}
+.slider {
+    display: flex;
+    transition: transform 1s ease-in-out;
+}
+.container-fluid {
+    flex: 0 0 100%;
+}
+
+/* other style here mention with comment */
