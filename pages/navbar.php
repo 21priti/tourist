@@ -31,7 +31,7 @@
               <a class="nav-link" href="packages.php"><i class="bi bi-pin-map-fill"></i> Places</a>
             </li>
             <li class="nav-item px-3">
-              <a class="nav-link" href="blog.php"><i class="bi bi-vector-pen"></i> Blog</a>
+              <a class="nav-link" href="#blog"><i class="bi bi-vector-pen"></i> Blog</a>
             </li>
           </ul>
           <span class="navbar-text me-3">
@@ -51,6 +51,6 @@
         </div>
       </div>
     </nav>
-      <script src="../bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="../bootstrap/bootstrap.bundle.min.js"></script>
 </body>
 </html>
