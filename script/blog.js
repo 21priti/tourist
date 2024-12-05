@@ -12,4 +12,4 @@ function slideNext() {
 }
 
 // Start the sliding effect with a time interval
-setInterval(slideNext, 2000); // Change slide every 3 seconds
+setInterval(slideNext, 3000); // Change slide every 3 seconds
