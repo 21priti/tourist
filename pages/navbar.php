@@ -51,6 +51,6 @@
         </div>
       </div>
     </nav>
-      <script src="./bootstrap/bootstrap.bundle.min.js"></script>
+      <script src="../bootstrap/bootstrap.bundle.min.js"></script>
 </body>
 </html>
