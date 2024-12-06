@@ -28,7 +28,7 @@
               <a class="nav-link" href=""><i class="bi bi-telephone-fill"></i> Contact-Us</a>
             </li>
             <li class="nav-item px-3">
-              <a class="nav-link" href="packages.php"><i class="bi bi-pin-map-fill"></i> Places</a>
+              <a class="nav-link" href="packages.php "><i class="bi bi-pin-map-fill"></i> Places</a>
             </li>
             <li class="nav-item px-3">
               <a class="nav-link" href="blog.php"><i class="bi bi-vector-pen"></i> Blog</a>
