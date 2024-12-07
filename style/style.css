@@ -1,8 +1,4 @@
 /* blog style */
-body{
-    margin: 0;
-    overflow-x: hidden;
-}
 #main{
     background-color: rgb(21, 21, 74);
 }
@@ -12,16 +8,22 @@ body{
 }
 #slider-wrapper {
     position: relative;
-    overflow-x: hidden;
 }
 .slider {
     display: flex;
     transition: transform 1s ease-in-out;
 }
 .container-fluid {
-    flex: 0 0 100%; 
+    flex: 0 0 100%;
+}
+.carousel-control-prev {
+    left: -5rem; /* Adjust the value as needed to move further left */
 }
 
+.carousel-control-next {
+    right: -5rem; /* Adjust the value as needed to move further right */
+}
+  
 
 
 /* other style here mention with comment */
