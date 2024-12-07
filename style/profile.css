@@ -1,32 +1,4 @@
-/* blog style */
-.bg-slider{
-    background-color: rgb(21, 21, 74);
-}
-#img{
-    height:400px;
-    width: 450px;
-}
-#slider-wrapper {
-    position: relative;
-}
-.slider {
-    display: flex;
-    transition: transform 1s ease-in-out;
-}
-.container-fluid {
-    flex: 0 0 100%;
-}
-.carousel-control-prev {
-    left: -5rem; /* Adjust the value as needed to move further left */
-}
 
-.carousel-control-next {
-    right: -5rem; /* Adjust the value as needed to move further right */
-}
-  
-
-/* other style here mention with comment */
-/* profile page */
 .profile-body {
     background-color: #f8f9fa; /* Light theme */
     font-family: Arial, sans-serif;
