@@ -27,3 +27,60 @@
 
 
 /* other style here mention with comment */
+/* profile page */
+.profile-body {
+    background-color: #f8f9fa; /* Light theme */
+    font-family: Arial, sans-serif;
+}
+.profile-header {
+    margin-top: 2rem;
+    background: #ffffff;
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+.profile-pic-container {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+}
+.profile-pic {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #dee2e6;
+}
+.profile-pic-edit {
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    background: #007bff;
+    color: white;
+    border-radius: 50%;
+    padding: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.profile-pic-edit:hover {
+    background: #0056b3;
+}
+.edit-icon {
+    color: #6c757d;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: color 0.3s ease;
+}
+.edit-icon:hover {
+    color: #007bff;
+}
+.contact-info {
+    background: #ffffff;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
