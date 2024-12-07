@@ -16,5 +16,13 @@
 .container-fluid {
     flex: 0 0 100%;
 }
+.carousel-control-prev {
+    left: -5rem; /* Adjust the value as needed to move further left */
+}
+
+.carousel-control-next {
+    right: -5rem; /* Adjust the value as needed to move further right */
+}
+  
 
 /* other style here mention with comment */
