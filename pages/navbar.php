@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="light">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top" data-bs-theme="light">
       <div class="container-fluid">
       <i class="fa-brands fa-phoenix-framework fs-1" style="color:#3647df"></i><span class="fs-1 ps-2 fw-bold"> Travel</span>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -41,7 +41,7 @@
                 Profile
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Dashboard</a></li>
+                <li><a class="dropdown-item" href="profile.php">Dashboard</a></li>
                 <li><a class="dropdown-item" href="#">Setting</a></li>
                 <li><a class="dropdown-item" href="#">Log Out</a></li>
               </ul>
@@ -51,6 +51,7 @@
         </div>
       </div>
     </nav>
+    <div style="height: 80px;"></div>
     <script src="../bootstrap/bootstrap.bundle.min.js"></script>
 </body>
 </html>
