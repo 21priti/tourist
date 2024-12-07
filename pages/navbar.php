@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="../bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="../style/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" 
+    integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="light">
@@ -25,13 +26,13 @@
               <a class="nav-link" href=""><i class="bi bi-file-person-fill"></i> About</a>
             </li>
             <li class="nav-item px-3">
-              <a class="nav-link" href=""><i class="bi bi-telephone-fill"></i> Contact-Us</a>
+              <a class="nav-link" href="contact.php"><i class="bi bi-telephone-fill"></i> Contact-Us</a>
             </li>
             <li class="nav-item px-3">
               <a class="nav-link" href="packages.php "><i class="bi bi-pin-map-fill"></i> Places</a>
             </li>
             <li class="nav-item px-3">
-              <a class="nav-link" href="blog.php"><i class="bi bi-vector-pen"></i> Blog</a>
+              <a class="nav-link" href="#blog"><i class="bi bi-vector-pen"></i> Blog</a>
             </li>
           </ul>
           <span class="navbar-text me-3">
@@ -51,6 +52,6 @@
         </div>
       </div>
     </nav>
-      <script src="./bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="../bootstrap/bootstrap.bundle.min.js"></script>
 </body>
 </html>
