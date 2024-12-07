@@ -1,6 +1,6 @@
-<div id="carouselExample" class="carousel slide rounderd-5" data-bs-ride="carousel">
+<div id="main" class="carousel slide rounderd-5" data-bs-ride="carousel">
   <div class="carousel-inner" >
-    <div class="carousel-item active bg-primary">
+    <div class="carousel-item active">
         <div class="row g-5 mx-5 my-3">
             <div class="col-md-8 py-5 ps-4">
                 <h1 class="text-light fw-bold">A Journey Beyond Expectations</h1>
