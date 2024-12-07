@@ -7,6 +7,7 @@ function slideNext() {
     const offset = -(currentIndex * 100);
     slider.style.transform = `translateX(${offset}%)`;
 
+
     // Move to the next slide, loop back if at the end
     currentIndex = (currentIndex + 1) % (slides.length-1);
 }
