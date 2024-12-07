@@ -1,4 +1,7 @@
 <?php include_once "navbar.php"; ?>
+<head>
+    <link rel="stylesheet" href="../style/profile.css">
+</head>
 <body class="profile-body">
 <div class="container">
     <div class="profile-header text-center">
