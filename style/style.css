@@ -1,6 +1,6 @@
 /* blog style */
 #main{
-    background-color: rgb(21, 21, 74);
+    background-color: rgb(21, 21, 69);
 }
 #img{
     height:400px;
@@ -24,6 +24,7 @@
     right: -5rem; /* Adjust the value as needed to move further right */
 }
   
+
 
 /* other style here mention with comment */
 /* profile page */
