@@ -1,0 +1,26 @@
+#bg{
+    background-image: url("../image/about8.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 450px;
+   
+    
+}
+.text{
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    color: white;
+    
+}
+.text h1{
+    font-size: 80px;
+    float: right;
+
+}
+.div{
+    height: 500px;
+}
+.hove:hover{
+    color: blue;
+
+
+}
