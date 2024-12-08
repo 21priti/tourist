@@ -3,8 +3,6 @@
 
 <head>
     <link rel="stylesheet" href="../style/about.css">
-
-
 </head>
 
 <body>
