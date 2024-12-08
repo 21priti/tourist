@@ -3,8 +3,9 @@
     <link rel="stylesheet" href="../style/profile.css">
 </head>
 <body style="background: linear-gradient(135deg, #f0f8ff, #e6f7ff);">
+    <div style="height:70px;"></div>
     <div class="card mt-3 w-50 mx-auto bg-light mb-5 pb-5 border border-2 rounded-3 shadow text-center profile">
-        <div class="card-header" style="background:rgb(80, 119, 196);">
+        <div class="card-header" style="background-color: rgb(21, 21, 74);;">
             <h1 class="text-light fw-bold pt-2">My Profile</h1>
         </div>    
         <div class="card-body">

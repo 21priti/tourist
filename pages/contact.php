@@ -4,9 +4,10 @@
     <link rel="stylesheet" href="../style/contact.css">
 </head>
 <body>
+    <div style="height:70px;"></div>
     <div class="card mt-3 w-50 mx-auto bg-light mb-5 pb-3 border border-2 rounded-3 shadow">
-        <div class="card-header" style="background:rgb(80, 119, 196);">
-            <h2 class="text-center fw-bold text-light pt-2">Contact-Us</h2>
+        <div class="card-header" style="background-color: rgb(21, 21, 74);">
+            <h2 class="text-center fw-bold fs-1 text-light pt-2">Contact-Us</h2>
         </div>
         <div class="card-body">
             <p class="text-center fs-5">We will get back to you asap! </p>

@@ -44,6 +44,8 @@
             </button>
         </div>
     </div>
+    <!-- about us -->
+    <?php include_once "about.php";?>
     <!-- package  -->
     <div class="container my-4">
         <h1 class="text-center mb-4">Packages</h1>
