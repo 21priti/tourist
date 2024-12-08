@@ -1,3 +1,6 @@
+<head>
+    <link rel="stylesheet" href="../style/blog.css">
+</head>
 <div id="carouselExample" class="carousel slide rounderd-5 bg-slider" data-bs-ride="carousel">
   <div class="carousel-inner" >
     <div class="carousel-item active ">
