@@ -1,0 +1,20 @@
+.carousel-caption {
+    position: absolute;
+    top: 55%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust the center position */
+    text-align: center;
+    z-index: 10;
+}
+.caption-heading{
+    font-size: 70px;
+    color: cornsilk;
+}
+.caption-body{
+    color: cornsilk;
+}
+.image-card {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
