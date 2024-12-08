@@ -3,7 +3,6 @@
 <!-- hero section -->
 
 
-
 <div id="blog">
 <?php include_once "blog.php"?>
 </div>
