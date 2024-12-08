@@ -23,7 +23,7 @@
               <a class="nav-link active" aria-current="page" href="home.php"><i class="bi bi-house-fill"></i> Home</a>
             </li>
             <li class="nav-item px-3">
-              <a class="nav-link" href=""><i class="bi bi-file-person-fill"></i> About</a>
+              <a class="nav-link" href="#about"><i class="bi bi-file-person-fill"></i> About</a>
             </li>
             <li class="nav-item px-3">
               <a class="nav-link" href="contact.php"><i class="bi bi-telephone-fill"></i> Contact-Us</a>

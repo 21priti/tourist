@@ -4,6 +4,7 @@
     <link rel="stylesheet" href="../style/contact.css">
 </head>
 <body>
+    
     <div style="height:70px;"></div>
     <div class="card mt-3 w-50 mx-auto bg-light mb-5 pb-3 border border-2 rounded-3 shadow">
         <div class="card-header" style="background-color: rgb(21, 21, 74);">
