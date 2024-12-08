@@ -6,14 +6,17 @@
 </head>
 
 <body>
-    <div class="mt-5">
+    <div class="text-center " id="about">
+        <h1> Explore More</h1>
+</div>
+    <div data-aos="fade-up" data-aos-delay="100">
         <div class="card" id="bg">
             <div class="card-body text">
                 <h1 class="card-title fw-bold p-5">Your <br>Travel<br> Assistant</h1>
             </div>
         </div>
     </div>
-    <div class="div container-fluid p-5">
+    <div class=" div container-fluid p-5" data-aos="fade-up" data-aos-delay="100">
         <div class="row g-5">
 
             <div class="col-md-8 pt-3">
@@ -36,7 +39,7 @@
             </div>
         </div>
     </div>
-    <div class="container-fluid p-5  bg-dark">
+    <div class="container-fluid p-5  bg-dark" data-aos="fade-up" data-aos-delay="100">
 
         <div class="">
             <h1 class="fw-bold text-white">What We Do</h1>
