@@ -11,7 +11,7 @@
         <div class="card-body">
             <p class="text-center fs-5">We will get back to you asap! </p>
             <div class="container text-center">
-                <form action="contact.html" method="post" class="mt-5" onsubmit="return func1(event)">
+                <form action="contact.php" method="post" class="mt-5" onsubmit="return func1(event)">
                     <div class="row">
                         <div class="col-md-6">
                             <div class="input-group">
