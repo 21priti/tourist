@@ -1,11 +1,5 @@
 /* contact us page styling */
-body{
-    margin: 0;
-    padding: 0;
-    border: 0;
-    background: linear-gradient(135deg, #f0f8ff, #e6f7ff);
-    font-family: Arial, sans-serif;
-}
+
 #contact{
     background: #ffffff;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
