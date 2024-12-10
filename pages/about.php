@@ -1,5 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
 
 <head>
     <link rel="stylesheet" href="../style/about.css">
@@ -39,7 +37,7 @@
             </div>
         </div>
     </div>
-    <div class="container-fluid p-5  bg-dark" data-aos="fade-up" data-aos-delay="100">
+    <div class="container-fluid p-5 mt-5 bg-dark" data-aos="fade-up" data-aos-delay="100">
 
         <div class="">
             <h1 class="fw-bold text-white">What We Do</h1>
@@ -81,9 +79,4 @@
             </div>
         </div>
     </div>
-
-
-    <script src="../bootstrap/bootstrap.bundle.min.js"></script>
 </body>
-
-</html>

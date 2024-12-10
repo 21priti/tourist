@@ -1,9 +1,8 @@
 <?php include_once "navbar.php"; ?>
 <head>
     <link rel="stylesheet" href="../style/home.css">
-    <link rel="stylesheet" href="../style/universal.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    
 
 </head>
 <body>
@@ -101,8 +100,9 @@
     
     <?php include_once "footer.php"?>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
-  AOS.init();
-</script>
+        AOS.init();
+    </script>
 </body>
 </html>

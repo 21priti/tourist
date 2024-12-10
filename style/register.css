@@ -1,7 +1,7 @@
 /* contact us page styling */
 
 
-input[type="text"],[type="email"],[type="submit"],[type="password"],textarea{
+input[type="text"],[type="email"],[type="submit"],[type="password"],[type="date"],[type="radio"],textarea{
     box-sizing: border-box;
     padding: 8px;
     font-size: 16px;
@@ -32,3 +32,4 @@ textarea::placeholder {
     left: 10px;
     transform: translateY(-50%);
 }
+
