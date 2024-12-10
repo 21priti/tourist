@@ -59,7 +59,7 @@
         <h1 class="text-center mb-4">Packages</h1>
         <div class="row">
             <div class="col-md-4">
-                <div class="card">
+                <div class="rowa card">
                     <img src="../image/package1.jpg" class="card-image-top image-card" alt="" srcset="">
                     <div class="card-body">
                         <h5 class="card-title">Card title</h5>
