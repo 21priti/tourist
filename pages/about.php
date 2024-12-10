@@ -6,7 +6,7 @@
 </head>
 
 <body>
-    <div class="text-center " id="about">
+    <div class="text-center" id="about">
         <h1> Explore More</h1>
 </div>
     <div data-aos="fade-up" data-aos-delay="100">
