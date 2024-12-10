@@ -42,6 +42,7 @@
                 Profile
               </a>
               <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="register.php">Register</a></li>
                 <li><a class="dropdown-item" href="profile.php">Dashboard</a></li>
                 <li><a class="dropdown-item" href="#">Setting</a></li>
                 <li><a class="dropdown-item" href="#">Log Out</a></li>
