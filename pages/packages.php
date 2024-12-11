@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Packages</title>
-  
-   
+
+
 </head>
+
 <body>
     <?php
     include_once "navbar.php"
@@ -20,8 +22,9 @@
                 <h1 class="text-primary fw-bold">Discover Your Next Adventure!</h1>
                 <span class="fs-5 fst-italic">
                     "Welcome to our exclusive packages page—where your dream destinations come to life!
-                        Explore handpicked travel packages crafted for every explorer, from serene getaways to thrilling adventures. 
-                        Let’s make your journey unforgettable!"
+                    Explore handpicked travel packages crafted for every explorer, from serene getaways to thrilling
+                    adventures.
+                    Let’s make your journey unforgettable!"
                 </span>
             </div>
         </div>
@@ -32,32 +35,33 @@
             <div class="row g-3 border border-1">
                 <div class="col-md-8">
                     <h4>Puri</h4>
-</div>
-<div class="col-md-4">
-<img src="../image/images (2).jpg" class="img-fluid">
-</div>
-</div>
-    <div class="row border border-1">
+                </div>
+                <div class="col-md-4">
+                    <img src="../image/images (2).jpg" class="img-fluid">
+                </div>
+            </div>
+            <div class="row border border-1">
                 <div class="col-md-8">
                     <h4>Puri</h4>
-</div>
-<div class="col-md-4">
-<img src="../image/images (2).jpg" class="img-fluid">
-</div>
-</div>
+                </div>
+                <div class="col-md-4">
+                    <img src="../image/images (2).jpg" class="img-fluid">
+                </div>
+            </div>
 
             <div class="row border border-1">
                 <div class="col-md-8">
                     <h4>Puri</h4>
-</div>
-<div class="col-md-4">
-<img src="../image/images (2).jpg" class="img-fluid">
-</div>
-</div>
-</div>
-</div>
+                </div>
+                <div class="col-md-4">
+                    <img src="../image/images (2).jpg" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
 
 
-        
+
 </body>
+
 </html>
