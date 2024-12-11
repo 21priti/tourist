@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 09, 2024 at 04:29 PM
+-- Generation Time: Dec 11, 2024 at 07:50 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -41,6 +41,15 @@ CREATE TABLE `register` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
+-- Dumping data for table `register`
+--
+
+INSERT INTO `register` (`cid`, `admin`, `name`, `email`, `phone`, `gender`, `dob`, `address`, `password`, `profile_pic`) VALUES
+(3, 0, 'Priti pralipta Rout', 'pritipralipta2002@gmail.com', 7847993120, 'female', '2002-09-18', 'TAHASIL COLONY,HATABAZAR,JAGATSINGHPUR', '1234', '1733928249-professor-money-heist-1yegj3ptnd8g5noc.jpg'),
+(4, 0, 'Hrushikesh', 'hrushi@gmail.com', 7847993121, 'male', '2000-12-19', 'Bahrampur', '5678', '1733941392-HD-wallpaper-money-heist-cool-dope-professor-thumbnail.jpg'),
+(6, 0, 'Subhalaxmi', 'subha@gmail.com', 7847993122, 'female', '2024-12-25', 'JAGATSINGHPUR', '22', '1733942429-pexels-ninauhlikova-287240.jpg');
+
+--
 -- Indexes for dumped tables
 --
 
@@ -59,7 +68,7 @@ ALTER TABLE `register`
 -- AUTO_INCREMENT for table `register`
 --
 ALTER TABLE `register`
-  MODIFY `cid` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `cid` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
