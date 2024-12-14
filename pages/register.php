@@ -21,10 +21,11 @@
                 <form action="register.php" method="post" class="mt-5" enctype="multipart/form-data">
                     <div class="row">
                         <div class="col-md-12">
-                            <div class="input-group">
-                                <i class="icon fas fa-user"></i>
-                                <input type="text" name="name" placeholder="Enter Your Name" class="fname w-100">
-                            </div>
+                        <div class="input-group">
+    <span class="input-group-text"><i class="fas fa-map-marker-alt"></i></span>
+    <input type="text" class="form-control" name="pname" placeholder="Enter the package location">
+</div>
+
                         </div>
                         <div class="mt-3">
                             <div class="input-group">
@@ -94,7 +95,6 @@
                                 <input class="btn btn-primary w-100 bg-primary text-light" type="submit" name="submit"
                                     value="SUBMIT">
                             </div>
-
                         </div>
                 </form>
             </div>

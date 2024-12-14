@@ -1,7 +1,7 @@
 /* contact us page styling */
 
 
-input[type="text"],[type="email"],[type="submit"],[type="password"],[type="date"],[type="radio"],textarea{
+input[type="text"],[type="email"],[type="submit"],[type="password"],[type="date"],[type="radio"],textarea,select{
     box-sizing: border-box;
     padding: 8px;
     font-size: 16px;
@@ -11,7 +11,8 @@ input[type="text"],[type="email"],[type="submit"],[type="password"],[type="date"
     border: 1px solid #ccc;
 }
 input::placeholder,
-textarea::placeholder {
+textarea::placeholder
+select::placeholder {
     color: #aaa;
 }
 .input-group{
