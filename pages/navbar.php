@@ -19,8 +19,8 @@ session_start();
 <body style="overflow-x:hidden;">
   <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top" data-bs-theme="light">
     <div class="container-fluid">
-      <i class="fa-brands fa-phoenix-framework fs-1" style="color:#3647df"></i><span class="fs-1 ps-2 fw-bold">
-        Travel</span>
+      <a href="home.php"><i class="fa-brands fa-phoenix-framework fs-1" style="color:rgb(21, 21, 74);"><span class="fs-1 ps-2 fw-bold ">
+      Travel</span></i></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
