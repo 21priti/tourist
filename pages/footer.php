@@ -4,10 +4,10 @@
 <body>
     <div style="height:1px;"></div>
     <div class="footer mt-2 bg-dark text">
-        <div class="container ">
+        <div class="container">
             <div class="row g-5">
                 <div class="col-md-3 mt-4">
-                    <i class="fa-brands fa-phoenix-framework fs-1" ></i><span class="fs-1 ps-2 fw-bold heading-text"> Travel</span>
+                    <i class="fa-brands fa-phoenix-framework fs-1 text-light" ></i><span class="fs-1 ps-2 fw-bold heading-text"> Travel</span>
                     <p class="text-light mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, inventore?</p>
                     <div class="mt-4">
                         <a href="#" class="text-decoration-none text-light me-3"><i class="bi bi-facebook fs-5"></i> </a>
@@ -29,7 +29,7 @@
                 </div>
                 <div class="col-md-3">
                     <h3 class=" mb-3 fw-bold heading-text">Office</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam sit est velit quas alias itaque in odit, recusandae fugiat facere veritatis quia magni. Deleniti, consequuntur quos amet necessitatibus cumque qui?</p>
+                    <p class="text-light">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam sit est velit quas alias itaque in odit, recusandae fugiat facere veritatis quia magni. Deleniti, consequuntur quos amet necessitatibus cumque qui?</p>
                 </div>
             </div>
             <div class="text-center text-light mt-5">

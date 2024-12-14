@@ -19,36 +19,57 @@ session_start();
 <body style="overflow-x:hidden;">
   <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top" data-bs-theme="light">
     <div class="container-fluid">
-      <i class="fa-brands fa-phoenix-framework fs-1" style="color:#3647df"></i><span class="fs-1 ps-2 fw-bold">
-        Travel</span>
+      <a href="home.php"><i class="fa-brands fa-phoenix-framework fs-1" style="color:rgb(21, 21, 74);"><span class="fs-1 ps-2 fw-bold ">
+      Travel</span></i></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav mx-auto mb-lg-0 fw-bold">
-          <li class="nav-item px-3">
-            <a class="nav-link active" aria-current="page" href="home.php"><i class="bi bi-house-fill"></i> Home</a>
-          </li>
-          <li class="nav-item px-3">
-            <a class="nav-link" href="#about"><i class="bi bi-file-person-fill"></i> About</a>
-          </li>
-          <li class="nav-item px-3">
-            <a class="nav-link" href="contact.php"><i class="bi bi-telephone-fill"></i> Contact-Us</a>
-          </li>
-          <li class="nav-item px-3">
-            <a class="nav-link" href="packages.php "><i class="bi bi-pin-map-fill"></i> Places</a>
-          </li>
-          <li class="nav-item px-3">
-            <a class="nav-link" href="#blog"><i class="bi bi-vector-pen"></i> Blog</a>
-          </li>
-        </ul>
+        <?php
+        if(isset($_SESSION['admin'])){
+          ?>
+            <ul class="navbar-nav mx-auto mb-lg-0 fw-bold">
+              <li class="nav-item px-3">
+                <a class="nav-link active" aria-current="page" href="home.php"><i class="bi bi-house-fill"></i> Home</a>
+              </li>
+              <li class="nav-item px-3">
+                <a class="nav-link" href="packages.php"><i class="fa-solid fa-paper-plane"></i> Packages</a>
+              </li>
+              <li class="nav-item px-3">
+                <a class="nav-link" href="contact.php"><i class="fa-solid fa-pen-to-square"></i> Package Modify</a>
+              </li>
+              <li class="nav-item px-3">
+                <a class="nav-link" href="#blog"><i class="fa-solid fa-headset"></i> Review-Query</a>
+              </li>
+            </ul>
+          <?php
+        }else{
+          ?>
+            <ul class="navbar-nav mx-auto mb-lg-0 fw-bold">
+              <li class="nav-item px-3">
+                <a class="nav-link active" aria-current="page" href="home.php"><i class="bi bi-house-fill"></i> Home</a>
+              </li>
+              <li class="nav-item px-3">
+                <a class="nav-link" href="packages.php"><i class="fa-solid fa-paper-plane"></i> Packages</a>
+              </li>
+              <li class="nav-item px-3">
+                <a class="nav-link" href="packages.php "><i class="fa-regular fa-calendar-check"></i> Planning</a>
+              </li>
+              <li class="nav-item px-3">
+                <a class="nav-link" href="#blog"><i class="fa-solid fa-headset"></i> Contact-Us</a>
+              </li>
+            </ul>
+          <?php
+        }
+        ?>
+        
 
 
         <span class="navbar-text">
           <ul class="navbar-nav">
             <?php
-              if(isset($_SESSION['id'])){
+              if(isset($_SESSION['cid'])){
             ?>
             <li class="nav-item dropdown fw-bold">
               <a class="nav-link dropdown-toggle-d-none " href="#" role="button" data-bs-toggle="dropdown"
