@@ -1,21 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-
+<?php include_once "navbar.php";?>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register</title>
     <link rel="stylesheet" href="../style/register.css">
 </head>
-
 <body>
     <?php 
-        include_once "navbar.php";
         if(isset($_SESSION['cid'])){
-            header("location:logout.php");
+            session_destroy();
+            header("location:login.php");
         }
     ?>
-
     <div style="height:70px;"></div>
     <div class="card mt-3 w-50 mx-auto bg-light mb-5 pb-3 border border-2 rounded-3 shadow">
         <div class="card-header" style="background-color: rgb(21, 21, 74);">
@@ -24,7 +17,7 @@
 
         <div class="card-body">
             <div class="container text-center">
-                <form action="login.php" method="post" class="">
+                <form method="post" class="">
                     <div class="row">
                         <div class="mt-3">
                             <div class="input-group">
@@ -55,15 +48,26 @@
         require_once "../databasefunction/dbfunctions.php";
         $res=login($email,$password);
         if($res){
-            session_start();
             $_SESSION['name'] = $res['name'];
-            $_SESSION['id'] = $res['cid'];
-            header("location:home.php");
+            $_SESSION['cid'] = $res['cid'];
+            $_SESSION['admin']=$res['admin'];
+            $_SESSION['email']=$res['email'];
+            $_SESSION['phone']=$res['phone'];
+            $_SESSION['gender']=$res['gender'];
+            $_SESSION['password']=$res['password'];
+            ?>
+                <script>
+                    window.location = "home.php";
+                </script>
+            <?php
+            // header("location:home.php");
         } else {
-            echo "Invalid Emial or Password";
+            ?>
+                <script>
+                    alert("email,password is wrong.");
+                </script>
+            <?php
         }
     }
     ?>
 </body>
-
-</html>

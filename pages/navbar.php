@@ -48,7 +48,7 @@ session_start();
         <span class="navbar-text">
           <ul class="navbar-nav">
             <?php
-              if(isset($_SESSION['id'])){
+              if(isset($_SESSION['cid'])){
             ?>
             <li class="nav-item dropdown fw-bold">
               <a class="nav-link dropdown-toggle-d-none " href="#" role="button" data-bs-toggle="dropdown"
