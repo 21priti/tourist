@@ -18,7 +18,7 @@
 
         <div class="card-body">
             <div class="container text-center">
-                <form action="home.php" method="post" class="mt-5" enctype="multipart/form-data">
+                <form action="register.php" method="post" class="mt-5" enctype="multipart/form-data">
                     <div class="row">
                         <div class="col-md-12">
                             <div class="input-group">
@@ -100,10 +100,42 @@
             </div>
         </div>
     </div>
-
+    <?php
+        if(isset($_POST['submit'])){
+            require_once "../databasefunction/dbfunctions.php";
+            $name = $_POST['name'];
+            $email = $_POST['email'];
+            $ph = $_POST['ph-no'];
+            $gender = $_POST['gender'];
+            $dob = $_POST['dob'];
+            $address = $_POST['addr'];
+            $password= $_POST['password'];
+            $image = $_FILES['image'];
+            $new_name=time()."-".$image['name'];
+            $upload_path="../databasefunction/user_images/".$new_name;
+        
+            if(move_uploaded_file($image['tmp_name'],  $upload_path)){
+                $res=register($name,$email,$ph,$gender,$dob,$address,$password,$new_name);
+                if($res){
+                    ?>
+                    <script>
+                        alert("You can login now");
+                        window.location = "login.php";
+                    </script>
+                    <?php
+                } else {
+                    ?>
+                    <script>
+                        alert("something went wrong.");
+                        window.location = "register.php";
+                    </script>
+                    <?php
+                }
+            }   
+        }
+    ?>
 
     <script src="../script/register.js"></script>
-    <script src="../script/contact.js"></script>
 </body>
 
 </html>
