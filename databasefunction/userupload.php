@@ -27,12 +27,12 @@ if(isset($_POST['submit'])){
         return $res;
         header("location:home.php");
         
-    } catch(Exception $e){
-        die($e->getMessage());
-    } finally {
-        $conn->close();
+        } catch(Exception $e){
+            die($e->getMessage());
+        } finally {
+            $conn->close();
+        }
     }
-}
 
 }
 ?>
