@@ -45,45 +45,42 @@ session_start();
         </ul>
 
 
-        <span class="navbar-text me-3">
+        <span class="navbar-text">
           <ul class="navbar-nav">
             <?php
               if(isset($_SESSION['id'])){
-                ?>
+            ?>
             <li class="nav-item dropdown fw-bold">
               <a class="nav-link dropdown-toggle-d-none " href="#" role="button" data-bs-toggle="dropdown"
                 aria-expanded="false"><i class="bi bi-person-fill"></i>
                 Profile
               </a>
-
-
               <ul class="dropdown-menu">
-
                 <li><a class="dropdown-item" href="profile.php">Dashboard</a></li>
                 <li><a class="dropdown-item" href="#">Setting</a></li>
                 <li><a class="dropdown-item" href="logout.php">Log Out</a></li>
               </ul>
-
             </li>
+            <?php
+              }else{
+            ?>
+                <li class="nav-item dropdown fw-bold">
+                  <a class="nav-link dropdown-toggle-d-none " href="#" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false"><i class="bi bi-person-fill"></i>
+                    Log In/Register
+                  </a>
+                  <ul class="dropdown-menu">
+
+                    <li><a class="dropdown-item" href="register.php">Sign Up</a></li>
+                    <li><a class="dropdown-item" href="login.php">Sign In</a></li>
+                  </ul>
+                </li>
+            <?php
+              } 
+            ?>
+          </ul>
         </span>
-        <?php
-              }
-            
-          
-              
-              else{
-                ?>
-        <li class="nav-item px-3">
-          <a class="nav-link btn bg-primary text-white fw-bold p-2" href="register.php"><i
-              class="me-1 fas fa-user-plus"></i> REGISTER</a>
-        </li>
-        <li class="nav-item px-3">
-          <a class="nav-link btn bg-primary text-white fw-bold p-2" href="login.php"><i
-              class=" me-1 fas fa-sign-in-alt"></i>LOGIN</a>
-        </li>
-        <?php
-              }
-          ?>
+        
       </div>
     </div>
   </nav>
