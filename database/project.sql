@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 14, 2024 at 08:57 PM
+-- Generation Time: Dec 15, 2024 at 11:16 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -62,7 +62,11 @@ CREATE TABLE `package` (
 --
 
 INSERT INTO `package` (`package_id`, `name`, `des1`, `des2`, `des3`, `price`, `rating`, `no_places`, `starting_place`, `ending_place`, `days`, `travel_by`) VALUES
-(5, 'Puri', 'jbvdxfvdiu', 'nbdfkgbkfd', 'bnvkbvkdf', 3000.00, 4.0, 3, 'Cuttack', 'Bhubaneswar', 3, 'bus');
+(6, 'Agra - A Journey to the Taj', 'Experience the timeless beauty of the Taj Mahal, a symbol of eternal love. Built by Emperor Shah Jahan in memory of his beloved wife Mumtaz Mahal, this white marble wonder is a UNESCO World Heritage Site and one of the Seven Wonders of the World. Mar', 'Step into history at Agra Fort, a massive red sandstone fortress that served as the residence of Mughal emperors. Explore its splendid palaces, audience halls, and the famous Musamman Burj, where Shah Jahan was imprisoned. Witness panoramic views of ', 'Discover the ancient city of Fatehpur Sikri, a blend of Persian and Indian architecture. Built by Emperor Akbar, this abandoned city showcases monuments like Buland Darwaza, Jama Masjid, and Panch Mahal. The stories of Mughal grandeur and Akbar\'s vis', 5000.00, 4.8, 3, 'New Delhi', 'Agra', 2, 'bus'),
+(7, 'Jaipur - A Royal Experience', 'Admire the unique and intricate design of Hawa Mahal, also known as the \"Palace of Winds.\" This stunning five-story pink sandstone structure features 953 small windows, or \"jharokhas,\" which allowed royal ladies to observe everyday life and festivals', 'Experience the grandeur of Amber Fort, perched on a hilltop overlooking Maota Lake. This iconic fort is a masterpiece of Rajputana architecture, combining Mughal influences with traditional Rajasthani design. Walk through its magnificent courtyards, ', 'Step into the heart of Jaipur\'s royal legacy at the City Palace, an exquisite blend of Mughal and Rajput architecture. Explore its ornate courtyards, museums displaying royal artifacts, and the iconic Chandra Mahal, where the royal family still resid', 7000.00, 4.7, 4, ' New Delhi', 'Jaipur', 3, 'bus'),
+(8, 'Leh-Ladakh - Land of High Passes', 'Immerse yourself in the surreal beauty of Pangong Lake, a shimmering blue water body surrounded by rugged mountains. This high-altitude lake, shared between India and China, changes colors throughout the day, offering a mesmerizing visual treat. A po', 'Explore the enchanting Nubra Valley, known for its breathtaking landscapes, sand dunes, and the unique Bactrian camels. Visit Diskit Monastery, home to a towering statue of Maitreya Buddha, and enjoy the serene atmosphere of this remote valley.', 'Feel the adrenaline rush as you drive through Khardung La, one of the highest motorable roads in the world at an elevation of 18,380 feet. The panoramic views of the surrounding snow-clad peaks and valleys are unparalleled, making it a must-visit for', 20000.00, 4.8, 5, 'Leh', 'Leh', 6, 'bus'),
+(9, 'Puri-Konark - Temple Trail', 'Begin your spiritual journey at the sacred Jagannath Temple, one of the Char Dham pilgrimage sites in India. Dedicated to Lord Jagannath, this ancient temple is a marvel of Kalinga architecture. Witness the grandeur of its annual Rath Yatra and feel ', 'Discover the awe-inspiring Konark Sun Temple, a UNESCO World Heritage Site and a testament to ancient Indian craftsmanship. Shaped like a colossal chariot, this architectural masterpiece is adorned with intricate stone carvings depicting scenes from ', 'Unwind on the golden sands of Puri Beach, a serene retreat for nature lovers. Enjoy the soothing sound of waves, take a refreshing dip in the sea, or savor the delicious local seafood. The stunning sunrise and sunset views make this beach a perfect s', 4000.00, 4.7, 3, 'Bhubaneswar ', 'Puri', 2, 'bus'),
+(10, ' Chilika - Birdwatcher\'s Paradise', 'Step into the enchanting Nalabana Bird Sanctuary, a haven for birdwatchers and nature enthusiasts. This lush sanctuary is part of Chilika Lake and transforms into a bustling hub during winter as thousands of migratory birds, including flamingos, hero', 'Embark on an exciting boat ride at Satpada, the home of the rare and endangered Irrawaddy dolphins. Glide through the tranquil waters of Chilika Lake and marvel at these gentle creatures as they gracefully surface. The picturesque backdrop and the th', 'Visit the mystical Kalijai Island, renowned for its scenic beauty and the revered temple of Goddess Kalijai. This island holds significant cultural and spiritual importance, with local legends adding an aura of mystery to its charm. The breathtaking ', 3500.00, 4.8, 3, ' Puri', 'Barkul', 2, 'bus');
 
 -- --------------------------------------------------------
 
@@ -81,9 +85,31 @@ CREATE TABLE `picture` (
 --
 
 INSERT INTO `picture` (`img_id`, `package_name`, `img_path`) VALUES
-(1, 'Puri', '1734189456_Screenshot (1).png'),
-(2, 'Puri', '1734189456_Screenshot 2024-10-21 144026.png'),
-(3, 'Puri', '1734189456_Screenshot 2024-10-21 144036.png');
+(4, 'Agra - A Journey to the Taj', '1734255426_agra1.webp'),
+(5, 'Agra - A Journey to the Taj', '1734255426_agra5.jpg'),
+(6, 'Agra - A Journey to the Taj', '1734255426_agra4.jpg'),
+(7, 'Agra - A Journey to the Taj', '1734255426_agra3.jpg'),
+(8, 'Agra - A Journey to the Taj', '1734255426_agra2.jpg'),
+(9, 'Jaipur - A Royal Experience', '1734256060_jaipur5.webp'),
+(10, 'Jaipur - A Royal Experience', '1734256060_jaipur4.avif'),
+(11, 'Jaipur - A Royal Experience', '1734256060_jaipur3.avif'),
+(12, 'Jaipur - A Royal Experience', '1734256060_jaipur2.avif'),
+(13, 'Jaipur - A Royal Experience', '1734256060_jaipur1.avif'),
+(14, 'Leh-Ladakh - Land of High Passes', '1734256463_leh5.webp'),
+(15, 'Leh-Ladakh - Land of High Passes', '1734256463_leh4.webp'),
+(16, 'Leh-Ladakh - Land of High Passes', '1734256463_leh3.avif'),
+(17, 'Leh-Ladakh - Land of High Passes', '1734256463_leh2.avif'),
+(18, 'Leh-Ladakh - Land of High Passes', '1734256463_leh1.avif'),
+(19, 'Puri-Konark - Temple Trail', '1734256993_puri5.jpg'),
+(20, 'Puri-Konark - Temple Trail', '1734256993_puri4.jpg'),
+(21, 'Puri-Konark - Temple Trail', '1734256993_puri3.webp'),
+(22, 'Puri-Konark - Temple Trail', '1734256993_puri2.webp'),
+(23, 'Puri-Konark - Temple Trail', '1734256993_puri1.webp'),
+(24, ' Chilika - Birdwatcher\'s Paradise', '1734257760_chilika5.jpg'),
+(25, ' Chilika - Birdwatcher\'s Paradise', '1734257760_chilika4.jpg'),
+(26, ' Chilika - Birdwatcher\'s Paradise', '1734257760_chilika3.webp'),
+(27, ' Chilika - Birdwatcher\'s Paradise', '1734257760_chilika2.webp'),
+(28, ' Chilika - Birdwatcher\'s Paradise', '1734257760_chilika1.webp');
 
 -- --------------------------------------------------------
 
@@ -212,13 +238,13 @@ ALTER TABLE `travel_price`
 -- AUTO_INCREMENT for table `package`
 --
 ALTER TABLE `package`
-  MODIFY `package_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `package_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `picture`
 --
 ALTER TABLE `picture`
-  MODIFY `img_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `img_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- AUTO_INCREMENT for table `register`
