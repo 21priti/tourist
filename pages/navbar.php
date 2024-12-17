@@ -3,7 +3,6 @@ session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -37,7 +36,7 @@ session_start();
                 <a class="nav-link" href="packages.php"><i class="fa-solid fa-paper-plane"></i> Packages</a>
               </li>
               <li class="nav-item px-3">
-                <a class="nav-link" href="contact.php"><i class="fa-solid fa-pen-to-square"></i> Package Modify</a>
+                <a class="nav-link" href="package_form.php"><i class="fa-solid fa-pen-to-square"></i> Package Modify</a>
               </li>
               <li class="nav-item px-3">
                 <a class="nav-link" href="#blog"><i class="fa-solid fa-headset"></i> Review-Query</a>
