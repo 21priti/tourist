@@ -1,4 +1,5 @@
 <?php
+    session_start();
     include_once "navbar.php";
     require_once "../databasefunction/dbfunctions.php";
     $pname=$_SESSION['pname'];

@@ -1,4 +1,9 @@
-<?php include_once "navbar.php"; ?>
+<?php
+session_start();
+include_once "navbar.php";
+require_once "../databasefunction/dbfunctions.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -92,7 +97,7 @@
                                     <option value="select">---SELECT---</option>
                                     <option value="bus">BUS</option>
                                     <option value="bus">TRAIN</option>
-                                    <option value="bus">BIKE</option>
+                                    <option value="bus">FLIGHT</option>
                                 </select>
                             </div>
                         </div>
@@ -162,7 +167,7 @@
                 ?>
     <script>
         alert("Package succesfully added");
-        window.location = "package_form.php";
+        window.location = "location.php";
     </script>
     <?php
             } else {
