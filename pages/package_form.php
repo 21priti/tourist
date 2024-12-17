@@ -1,9 +1,5 @@
 <?php include_once "navbar.php"; ?>
-<!DOCTYPE html>
-<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
     <link rel="stylesheet" href="../style/register.css">
 </head>
@@ -82,33 +78,33 @@
                         </div>
                         <div class="mt-3">
                             <div class="input-group">
-                                <select name="travelby" class="form-control w-100">
+                                <span class="input-group-text"><i class="fa-solid fa-truck-fast"></i></span>
+
+                                <select name="travelby" class="form-control">
                                     
-                                    <option value="select">---SELECT---</option>
+                                    <option value="select">Select how to travel</option>
                                     <option value="bus">BUS</option>
                                     <option value="bus">TRAIN</option>
-                                    <option value="bus">FLIGHT</option>
+                                    <option value="bus">BIKE</option>
                                 </select>
                             </div>
                         </div>
                         <div class="mt-3">
                             <div class="input-group">
-                            <span class="input-group-text"> <i class="icon fas fa-image"></i></span>
+                                <span class="input-group-text px-4"><i class="icon fas fa-image "></i></span>
                                 <input type="file" name="images[]" id="images" class="form-control" multiple>
                             </div>
                         </div>
                         <div class="mt-3">
                             <div class="input-group">
-                            <span class="input-group-text"><i class="fas fa-star"></i></span>
-                                <input type="text" name="rating" placeholder="Enter the rating" id=""
-                                    class="form-control">
+                                <span class="input-group-text"><i class="fas fa-star"></i></span>
+                                <input type="text" name="rating" placeholder="Enter the rating" id="" class="form-control">
                             </div>
                         </div>
 
 
                         <div class="mt-3">
-                            <input class="btn btn-primary w-100 bg-primary text-light" type="submit" name="submit"
-                                value="SUBMIT">
+                            <input class="btn btn-primary w-100 bg-primary text-light" type="submit" name="submit" value="SUBMIT">
                         </div>
                     </div>
                 </form>
@@ -145,34 +141,30 @@
                     if (!$stmt->execute()) {
                         $success = false;
                         break;
+                    }
+                }
+                else{
+                    $success = false;
+                    break;
+
                 }
             }
-            else{
-                $success = false;
-                break;
-
-            }
-        }
             if($res){
                 ?>
-    <script>
-        alert("Package succesfully added");
-        window.location = "package_form.php";
-    </script>
-    <?php
+                <script>
+                    alert("Package succesfully added");
+                    window.location = "package_form.php";
+                </script>
+                <?php
             } else {
                 ?>
-    <script>
-        alert("something went wrong.");
-        window.location = "package_form.php";
-    </script>
-    <?php
+                <script>
+                    alert("something went wrong.");
+                    window.location = "package_form.php";
+                </script>
+                <?php
             }
-        }
-
-        
+        }        
     }
     ?>
 </body>
-
-</html>
