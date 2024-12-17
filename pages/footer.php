@@ -3,7 +3,7 @@
 </head>
 <body>
     <div style="height:1px;"></div>
-    <div class="footer mt-2 bg-dark text">
+    <div class="footer mt-2 pb-2 bg-dark text">
         <div class="container">
             <div class="row g-5">
                 <div class="col-md-3 mt-4">
