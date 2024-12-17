@@ -1,5 +1,6 @@
 <?php
 session_start();
+$current_page = basename($_SERVER['PHP_SELF']); // Get the current script name
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,6 +14,7 @@ session_start();
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
     integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="../jq/jquery-3.7.1.js"></script>
 </head>
 
 <body style="overflow-x:hidden;">
@@ -25,53 +27,54 @@ session_start();
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
-        <?php
-        if(isset($_SESSION['admin'])){
-          ?>
+        <?php if (isset($_SESSION['admin'])) { ?>
             <ul class="navbar-nav mx-auto mb-lg-0 fw-bold">
               <li class="nav-item px-3">
-                <a class="nav-link active" aria-current="page" href="home.php"><i class="bi bi-house-fill"></i> Home</a>
+                <a class="nav-link <?= $current_page == 'home.php' ? 'active' : '' ?>" href="home.php">
+                  <i class="bi bi-house-fill"></i> Home
+                </a>
               </li>
               <li class="nav-item px-3">
-                <a class="nav-link" href="package_page.php"><i class="fa-solid fa-paper-plane"></i> Packages</a>
+                <a class="nav-link <?= $current_page == 'packages.php' ? 'active' : '' ?>" href="packages.php">
+                  <i class="fa-solid fa-paper-plane"></i> Packages
+                </a>
               </li>
               <li class="nav-item px-3">
-                <a class="nav-link" href="package_form.php"><i class="fa-solid fa-pen-to-square"></i> Package Modify</a>
-              </li>
-              <li class="nav-item px-3">
-                <a class="nav-link" href="#blog"><i class="fa-solid fa-headset"></i> Review-Query</a>
+                <a class="nav-link <?= $current_page == 'blog.php' ? 'active' : '' ?>" href="#blog">
+                  <i class="fa-solid fa-headset"></i> Review-Query
+                </a>
               </li>
             </ul>
-          <?php
-        }else{
-          ?>
+        <?php } else { ?>
             <ul class="navbar-nav mx-auto mb-lg-0 fw-bold">
               <li class="nav-item px-3">
-                <a class="nav-link active" aria-current="page" href="home.php"><i class="bi bi-house-fill"></i> Home</a>
+                <a class="nav-link <?= $current_page == 'home.php' ? 'active' : '' ?>" href="home.php">
+                  <i class="bi bi-house-fill"></i> Home
+                </a>
               </li>
               <li class="nav-item px-3">
-                <a class="nav-link" href="package_page.php"><i class="fa-solid fa-paper-plane"></i> Packages</a>
+                <a class="nav-link <?= $current_page == 'packages.php' ? 'active' : '' ?>" href="packages.php">
+                  <i class="fa-solid fa-paper-plane"></i> Packages
+                </a>
               </li>
               <li class="nav-item px-3">
-                <a class="nav-link" href="packages.php "><i class="fa-regular fa-calendar-check"></i> Planning</a>
+                <a class="nav-link <?= $current_page == 'package_form.php' ? 'active' : '' ?>" href="package_form.php">
+                  <i class="fa-regular fa-calendar-check"></i> Planning
+                </a>
               </li>
               <li class="nav-item px-3">
-                <a class="nav-link" href="#blog"><i class="fa-solid fa-headset"></i> Contact-Us</a>
+                <a class="nav-link <?= $current_page == 'contact.php' ? 'active' : '' ?>" href="contact.php">
+                  <i class="fa-solid fa-headset"></i> Contact-Us
+                </a>
               </li>
             </ul>
-          <?php
-        }
-        ?>
-        
-
+        <?php } ?>
 
         <span class="navbar-text">
           <ul class="navbar-nav">
-            <?php
-              if(isset($_SESSION['cid'])){
-            ?>
+            <?php if (isset($_SESSION['cid'])) { ?>
             <li class="nav-item dropdown fw-bold">
-              <a class="nav-link dropdown-toggle-d-none " href="#" role="button" data-bs-toggle="dropdown"
+              <a class="nav-link dropdown-toggle-d-none" href="#" role="button" data-bs-toggle="dropdown"
                 aria-expanded="false"><i class="bi bi-person-fill"></i>
                 Profile
               </a>
@@ -81,31 +84,23 @@ session_start();
                 <li><a class="dropdown-item" href="logout.php">Log Out</a></li>
               </ul>
             </li>
-            <?php
-              }else{
-            ?>
+            <?php } else { ?>
                 <li class="nav-item dropdown fw-bold">
-                  <a class="nav-link dropdown-toggle-d-none " href="#" role="button" data-bs-toggle="dropdown"
+                  <a class="nav-link dropdown-toggle-d-none" href="#" role="button" data-bs-toggle="dropdown"
                     aria-expanded="false"><i class="bi bi-person-fill"></i>
                     Log In/Register
                   </a>
                   <ul class="dropdown-menu">
-
                     <li><a class="dropdown-item" href="register.php">Sign Up</a></li>
                     <li><a class="dropdown-item" href="login.php">Sign In</a></li>
                   </ul>
                 </li>
-            <?php
-              } 
-            ?>
+            <?php } ?>
           </ul>
         </span>
-        
       </div>
     </div>
   </nav>
-  <!-- <div style="height: 80px;"></div> -->
   <script src="../bootstrap/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>
