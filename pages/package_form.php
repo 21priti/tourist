@@ -92,8 +92,8 @@ require_once "../databasefunction/dbfunctions.php";
                         </div>
                         <div class="mt-3">
                             <div class="input-group">
-                                <select name="travelby" class="form-control w-100">
-                                    
+                                <span class="input-group-text"> <i class="fa-solid fa-bus-simple"></i></span>
+                                <select name="travelby" class="form-control w-75">        
                                     <option value="select">---SELECT---</option>
                                     <option value="bus">BUS</option>
                                     <option value="bus">TRAIN</option>
@@ -103,7 +103,7 @@ require_once "../databasefunction/dbfunctions.php";
                         </div>
                         <div class="mt-3">
                             <div class="input-group">
-                            <span class="input-group-text"> <i class="icon fas fa-image"></i></span>
+                            <span class="input-group-text pe-4"> <i class="icon fas fa-image"></i></span>
                                 <input type="file" name="images[]" id="images" class="form-control" multiple>
                             </div>
                         </div>
