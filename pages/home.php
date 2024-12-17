@@ -2,8 +2,6 @@
 <head>
     <link rel="stylesheet" href="../style/home.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-    
-
 </head>
 <body>
     <!-- hero section -->
@@ -105,4 +103,3 @@
         AOS.init();
     </script>
 </body>
-</html>

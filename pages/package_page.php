@@ -80,6 +80,6 @@
         </div>   
     </div>
     <div class="mt-5"></div>
+    <?php include_once "footer.php";?>
     <script src="../script/packages.js"></script>
 </body>
-<?php include_once "footer.php";?>

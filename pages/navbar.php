@@ -36,9 +36,9 @@ session_start();
               <li class="nav-item px-3">
                 <a class="nav-link" href="package_page.php"><i class="fa-solid fa-paper-plane"></i> Packages</a>
               </li>
-              <li class="nav-item px-3">
+              <!-- <li class="nav-item px-3">
                 <a class="nav-link" href="package_form.php"><i class="fa-solid fa-pen-to-square"></i> Package Modify</a>
-              </li>
+              </li> -->
               <li class="nav-item px-3">
                 <a class="nav-link" href="#blog"><i class="fa-solid fa-headset"></i> Review-Query</a>
               </li>
@@ -54,10 +54,10 @@ session_start();
                 <a class="nav-link" href="package_page.php"><i class="fa-solid fa-paper-plane"></i> Packages</a>
               </li>
               <li class="nav-item px-3">
-                <a class="nav-link" href="packages.php "><i class="fa-regular fa-calendar-check"></i> Planning</a>
+                <a class="nav-link" href="package_form.php "><i class="fa-regular fa-calendar-check"></i> Planning</a>
               </li>
               <li class="nav-item px-3">
-                <a class="nav-link" href="#blog"><i class="fa-solid fa-headset"></i> Contact-Us</a>
+                <a class="nav-link" href="contact.php"><i class="fa-solid fa-headset"></i> Contact-Us</a>
               </li>
             </ul>
           <?php
