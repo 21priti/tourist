@@ -17,6 +17,7 @@
             if($res->num_rows >0){
                 $result = $res->fetch_assoc();
                 return $result;
+                
             } else {
                 return false;
             }
@@ -64,36 +65,49 @@
             } catch(Exception $e){
                 die($e->getMessage());
             }
-            // } finally {
-            //     $conn->close();
-            // }
+            
         }
-        // function package_image($pname,$unique_name){
-        //     global $conn;
-        //     try{
-        //         $qry="INSERT INTO picture(package_name,img_path) values(?,?)";
-        //         $stmt = $conn->prepare($qry);
-        //         $stmt->bind_param("ss",$pname,$unique_name);
-        //         if (!$stmt->execute()) {
-        //             $success = false;
-        //             break;
+        function location($location_name,$package_id,$sequence,$des,$new_name){
+            global $conn;
+            try{
+                $qry="INSERT INTO location(location_name,package_id,image,sequence,description) values(?,?,?,?,?)";
+                $stmt = $conn->prepare($qry);
+                $stmt->bind_param("siiss", $location_name,$package_id,$new_name,$sequence,$des);
+                $res = $stmt->execute();
+                if(!$res){
+                    echo $conn->error;
+                    return false;
+                }
+                return $res;
                 
-        //         }else{
-        //             $success = false;
-        //             break;
-        //         }
-        //         if(!$success){
-        //             echo $conn->error;
-        //             return false;
-        //         }
-        //         return true;
-        //     }catch(Exception $e){
-        //             die($e->getMessage());
-        //     }finally {
-        //         $conn->close();
+            } catch(Exception $e){
+                die($e->getMessage());
+            } 
+            
 
-        //     }
-        // }
+
+        }
+        function getPackage($pname){
+            global $conn;
+            try{
+                $qry="select package_id,no_places from package where name=? ";
+                $stmt = $conn->prepare($qry);
+                $stmt->bind_param("s",$pname);
+                $res = $stmt->execute();
+                $result = $stmt->get_result();
+                if($result->num_rows>0){
+                    
+                    return $result;
+                }
+                else{
+                    return false;
+                }
+                
+            } catch(Exception $e){
+                die($e->getMessage());
+            } 
+            
+        }
 
         
 ?>
