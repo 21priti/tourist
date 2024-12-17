@@ -17,6 +17,7 @@
             if($res->num_rows >0){
                 $result = $res->fetch_assoc();
                 return $result;
+                
             } else {
                 return false;
             }
