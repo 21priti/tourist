@@ -33,7 +33,7 @@ session_start();
                 <a class="nav-link active" aria-current="page" href="home.php"><i class="bi bi-house-fill"></i> Home</a>
               </li>
               <li class="nav-item px-3">
-                <a class="nav-link" href="packages.php"><i class="fa-solid fa-paper-plane"></i> Packages</a>
+                <a class="nav-link" href="package_page.php"><i class="fa-solid fa-paper-plane"></i> Packages</a>
               </li>
               <li class="nav-item px-3">
                 <a class="nav-link" href="package_form.php"><i class="fa-solid fa-pen-to-square"></i> Package Modify</a>
@@ -50,7 +50,7 @@ session_start();
                 <a class="nav-link active" aria-current="page" href="home.php"><i class="bi bi-house-fill"></i> Home</a>
               </li>
               <li class="nav-item px-3">
-                <a class="nav-link" href="packages.php"><i class="fa-solid fa-paper-plane"></i> Packages</a>
+                <a class="nav-link" href="package_page.php"><i class="fa-solid fa-paper-plane"></i> Packages</a>
               </li>
               <li class="nav-item px-3">
                 <a class="nav-link" href="packages.php "><i class="fa-regular fa-calendar-check"></i> Planning</a>
