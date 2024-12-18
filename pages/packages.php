@@ -14,17 +14,25 @@
             url: 'fetch_packages.php', // Ensure this is correct
             method: 'GET',
             success: function (data) {
-                data=JSON.parse(data);
+                try{
+                    data=JSON.parse(data);
+                    console.log(data);
+                }catch(error){
+                    console.log(error);
+                }
+                
                 let packagesHtml = '';
                 console.log("Packages fetched:", data);
                 for(let i=0; i<data.length; i++){
                     packagesHtml += `
                     <div class="col-md-4">
                         <div class="card shadow-sm">
+                        <img class="card-img-top" src="./uploads/${data[i]['img_path']}" alt="Card image cap" style="height:300px;">
                         <div class="card-body">
-                            <h5 class="card-title">${data[i]['name']}</h5>
+                            <h5 class="card-title fw-bold">${data[i]['name']}</h5>
                             <p class="card-text">${data[i]['des1']}</p>
-                            <p class="fw-bold">Price: ${data[i]['price']} rs</p>
+                            <p class="fw-bold mt-2">Number of places - ${data[i]['no_places']}</p>
+                            <p class="fw-bold fs-4 mt-2 text-danger">Price: ${data[i]['price']} rs</p>
                             <a href="package_page.php?pid=${data[i]['id']}" class="btn btn-primary">See Detail</a>
                         </div>
                         </div>
@@ -36,4 +44,5 @@
             });
         });
     </script>
+    <?php include_once "footer.php";?>
 </body>

@@ -57,11 +57,11 @@ $current_page = basename($_SERVER['PHP_SELF']); // Get the current script name
                   <i class="fa-solid fa-paper-plane"></i> Packages
                 </a>
               </li>
-              <li class="nav-item px-3">
+              <!-- <li class="nav-item px-3">
                 <a class="nav-link <?= $current_page == 'package_form.php' ? 'active' : '' ?>" href="package_form.php">
                   <i class="fa-regular fa-calendar-check"></i> Planning
                 </a>
-              </li>
+              </li> -->
               <li class="nav-item px-3">
                 <a class="nav-link <?= $current_page == 'contact.php' ? 'active' : '' ?>" href="contact.php">
                   <i class="fa-solid fa-headset"></i> Contact-Us
