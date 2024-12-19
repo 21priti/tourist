@@ -107,7 +107,7 @@ if ($locationResult->num_rows > 0) {
     </div>
 
     <!-- Add to Cart Section -->
-    <div class="container mx-5 px-5 mt-5 mb-3">
+    <div class="container px-5 mt-5 mb-3">
         <div class="row w-100 mt-5">
             <div class="col-md-8">
                 <h1 id="add-to-cart-title"><?php echo htmlspecialchars($packageDetails['name']); ?></h1>
