@@ -27,7 +27,9 @@ $current_page = basename($_SERVER['PHP_SELF']); // Get the current script name
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
-        <?php if (isset($_SESSION['admin'])) { ?>
+        <?php if ((session_status() === PHP_SESSION_NONE) ) { 
+                if($_SESSION['admin']===0){
+          ?>
             <ul class="navbar-nav mx-auto mb-lg-0 fw-bold">
               <li class="nav-item px-3">
                 <a class="nav-link <?= $current_page == 'home.php' ? 'active' : '' ?>" href="home.php">
@@ -57,11 +59,25 @@ $current_page = basename($_SERVER['PHP_SELF']); // Get the current script name
                   <i class="fa-solid fa-paper-plane"></i> Packages
                 </a>
               </li>
-              <!-- <li class="nav-item px-3">
-                <a class="nav-link <?= $current_page == 'package_form.php' ? 'active' : '' ?>" href="package_form.php">
-                  <i class="fa-regular fa-calendar-check"></i> Planning
+              <li class="nav-item px-3">
+                <a class="nav-link <?= $current_page == 'contact.php' ? 'active' : '' ?>" href="contact.php">
+                  <i class="fa-solid fa-headset"></i> Contact-Us
                 </a>
-              </li> -->
+              </li>
+            </ul>
+        <?php } 
+        }else{?>
+            <ul class="navbar-nav mx-auto mb-lg-0 fw-bold">
+              <li class="nav-item px-3">
+                <a class="nav-link <?= $current_page == 'home.php' ? 'active' : '' ?>" href="home.php">
+                  <i class="bi bi-house-fill"></i> Home
+                </a>
+              </li>
+              <li class="nav-item px-3">
+                <a class="nav-link <?= $current_page == 'packages.php' ? 'active' : '' ?>" href="packages.php">
+                  <i class="fa-solid fa-paper-plane"></i> Packages
+                </a>
+              </li>
               <li class="nav-item px-3">
                 <a class="nav-link <?= $current_page == 'contact.php' ? 'active' : '' ?>" href="contact.php">
                   <i class="fa-solid fa-headset"></i> Contact-Us
@@ -69,7 +85,6 @@ $current_page = basename($_SERVER['PHP_SELF']); // Get the current script name
               </li>
             </ul>
         <?php } ?>
-
         <span class="navbar-text">
           <ul class="navbar-nav">
             <?php if (isset($_SESSION['cid'])) { ?>
