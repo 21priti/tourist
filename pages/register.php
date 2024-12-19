@@ -22,21 +22,21 @@
                     <div class="row">
                         <div class="col-md-12">
                         <div class="input-group">
-                            <span class="input-group-text"><i class="fas fa-map-marker-alt"></i></span>
+                            <span class="input-group-text"><i class="fas fa-user"></i></span>
                         <input type="text" class="form-control" name="name" placeholder="Enter your name">
                     </div>
 
                         </div>
                         <div class="mt-3">
                             <div class="input-group">
-                                <i class="icon fas fa-envelope"></i>
-                                <input type="email" name="email" placeholder="Enter your Email" class="email w-100">
+                            <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                                <input type="email" name="email" placeholder="Enter your Email" class="form-control">
                             </div>
                         </div>
                         <div class="mt-3">
                             <div class="input-group">
-                                <i class="icon fas fa-phone"></i>
-                                <input type="text" name="ph-no" placeholder="Enter your phone number" class="ph w-100">
+                            <span class="input-group-text"><i class="fas fa-phone"></i></span>
+                                <input type="text" name="ph-no" placeholder="Enter your phone number" class="form-control">
                             </div>
                         </div>
                         <div class="mt-3">
@@ -65,28 +65,28 @@
                             </div>
                             <div class="mt-3">
                                 <div class="input-group">
-                                    <i class="icon fas fa-calendar-alt"></i>
-                                    <input type="date" name="dob" placeholder="Set your dob" id="dt" class="ph w-100">
+                                <span class="input-group-text"> <i class="fas fa-calendar-alt"></i></span>
+                                    <input type="date" name="dob" placeholder="Set your dob" id="dt" class="form-control">
                                 </div>
                             </div>
                             <div class="mt-3">
                                 <div class="input-group">
-                                    <i class="icon-a fas fa-home"></i>
-                                    <textarea cols="15" rows="5" placeholder="Enter Your address" class="addr w-100"
+                                <span class="input-group-text"><i class="fas fa-home"></i></span>
+                                    <textarea cols="15" rows="5" placeholder="Enter Your address" class="form-control"
                                         name="addr"></textarea>
                                 </div>
                             </div>
                             <div class="mt-3">
                                 <div class="input-group">
-                                    <i class="icon fas fa-lock"></i>
+                                <span class="input-group-text"><i class="fas fa-lock"></i></span>
                                     <input type="password" name="password" placeholder="Set your password"
-                                        class="w-100">
+                                    class="form-control">
                                 </div>
                             </div>
                             <div class="mt-3">
                                 <div class="input-group">
-                                    <i class="icon fas fa-image"></i>
-                                    <input type="file" name="image" required>
+                                <span class="input-group-text"><i class="fas fa-image"></i></span>
+                                    <input type="file" name="image" class="form-control" required>
                                 </div>
                             </div>
 
