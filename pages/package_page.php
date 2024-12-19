@@ -1,60 +1,32 @@
-<?php include_once "navbar.php"; ?>
 <?php
-// Include database connection
-require_once '../databasefunction/dbconnect.php';
-global $conn;
+include_once "navbar.php";
+require_once '../databasefunction/dbfunctions.php';
 
-// Fetch the package ID from the URL
-$packageId = $_GET['pid']; // Assuming pid is passed in the URL
+session_start();
 
-// Fetch package details (name, price, descriptions)
-$packageQuery = "SELECT name, price, des1, des2, des3 FROM package WHERE package_id = ?";
-$packageStmt = $conn->prepare($packageQuery);
-$packageStmt->bind_param('s', $packageId);
-$packageStmt->execute();
-$packageResult = $packageStmt->get_result();
+$packageId = $_GET['pid'];
 
-$packageDetails = [];
-if ($packageResult->num_rows > 0) {
-    $packageDetails = $packageResult->fetch_assoc();
-}
+// Fetch package details
+$packageDetails = getPackageDetails($packageId);
 
-// Fetch images for the package
-$query = "SELECT img_path FROM picture WHERE package_name = (SELECT name FROM package WHERE package_id = ?)";
-$stmt = $conn->prepare($query);
-$stmt->bind_param('s', $packageId);
-$stmt->execute();
-$result = $stmt->get_result();
+// Fetch package images
+$images = getPackageImages($packageId);
 
-$images = [];
-if ($result->num_rows > 0) {
-    while ($row = $result->fetch_assoc()) {
-        $images[] = $row['img_path'];
-    }
-}
-
-// Fetch locations for the package
-$locationQuery = "SELECT location_name, description, image FROM location WHERE package_id = ?";
-$locationStmt = $conn->prepare($locationQuery);
-$locationStmt->bind_param('s', $packageId);
-$locationStmt->execute();
-$locationResult = $locationStmt->get_result();
-
-$locations = [];
-if ($locationResult->num_rows > 0) {
-    while ($row = $locationResult->fetch_assoc()) {
-        $locations[] = $row;
-    }
-}
+// Fetch package locations
+$locations = getPackageLocations($packageId);
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="../style/packages.css">
+    <script src="../jq/jquery-3.7.1.js"></script>
+    <script src="../bootstrap/bootstrap.bundle.min.js"></script>
     <title>Package Details</title>
 </head>
 <body>
-    <div style="height: 75px;"></div>
 
     <!-- Carousel -->
     <div id="travelCarousel" class="carousel slide" data-bs-ride="carousel">
@@ -88,7 +60,10 @@ if ($locationResult->num_rows > 0) {
         <div class="flowchart my-5 p-5 col-md-4" id="flowchart">
             <div style="height: 20px;"></div>
             <?php foreach ($locations as $index => $location): ?>
-                <div class="circle" data-title="<?php echo htmlspecialchars($location['location_name']); ?>" data-description="<?php echo htmlspecialchars($location['description']); ?>" data-img="<?php echo htmlspecialchars($location['image']); ?>">
+                <div class="circle" 
+                     data-title="<?php echo htmlspecialchars($location['location_name']); ?>" 
+                     data-description="<?php echo htmlspecialchars($location['description']); ?>" 
+                     data-img="<?php echo htmlspecialchars($location['image']); ?>">
                     <?php echo htmlspecialchars($location['location_name']); ?>
                 </div>
                 <?php if ($index < count($locations) - 1): ?>
@@ -118,47 +93,71 @@ if ($locationResult->num_rows > 0) {
                     <img id="add-to-cart-img" src="<?php echo !empty($images) ? './uploads/' . htmlspecialchars($images[0]) : 'https://via.placeholder.com/1200x300'; ?>" alt="logo" class="img-fluid">
                     <div class="card-body text-center">
                         <div class="mb-2 fs-4" id="add-to-cart-price">Price: <?php echo htmlspecialchars($packageDetails['price']); ?> Rs/-</div>
-                        <button class="btn btn-primary" id="add-to-cart-btn">Buy</button>
+                        <button class="btn btn-primary" id="add-to-cart-btn" 
+                            onclick="<?php if (isset($_SESSION['cid'])) { ?>addToCart(<?php echo $_SESSION['cid']; ?>, <?php echo $packageId; ?>)<?php } else { ?>redirectToLogin()<?php } ?>">
+                            Buy
+                        </button>
                     </div>
                 </div>
             </div>
         </div>   
     </div>
-    <div class="mt-5"></div>
+    <div class="mt-5">
     <?php include_once "footer.php"; ?>
-
+    </div>
     <!-- Scripts -->
     <script>
-        // Function to update the details section
-        function showDetails(title, description, imgPath) {
-            document.getElementById('details-title').innerText = title;
-            document.getElementById('details-description').innerText = description;
-            document.getElementById('details-img').src = imgPath ? `./${imgPath}` : 'https://via.placeholder.com/1200x300';
+        // Redirect to Login Page
+        function redirectToLogin() {
+            alert('Please log in to continue.');
+            window.location.href = 'login.php';
         }
 
-        // Add click functionality to each circle
-        const circles = document.querySelectorAll('.circle');
-        circles.forEach(circle => {
-            circle.addEventListener('click', () => {
-                circles.forEach(c => c.classList.remove('active'));
-                circle.classList.add('active');
-                const title = circle.dataset.title;
-                const description = circle.dataset.description;
-                const imgPath = circle.dataset.img;
-
-                showDetails(title, description, imgPath);
+        // Add to Cart
+        function addToCart(cid, pid) {
+            $.ajax({
+                url: 'add_subscription.php',
+                type: 'POST',
+                contentType: 'application/json',
+                data: JSON.stringify({ cid: cid, pid: pid }),
+                success: function (response) {
+                    if (response.success) {
+                        alert(response.message);
+                    } else {
+                        alert(response.message || 'An error occurred.');
+                    }
+                },
+                error: function () {
+                    alert('An unexpected error occurred.');
+                }
             });
-        });
-
-        // Initialize with the first circle active
-        if (circles.length > 0) {
-            circles[0].classList.add('active');
-            showDetails(circles[0].dataset.title, circles[0].dataset.description, circles[0].dataset.img);
         }
 
-        // Add to Cart button functionality
-        document.getElementById('add-to-cart-btn').addEventListener('click', () => {
-            alert('<?php echo htmlspecialchars($packageDetails['name']); ?> has been added to your cart!');
+        // Show Details on Click
+        $(document).ready(function () {
+            function showDetails(title, description, imgPath) {
+                $('#details-title').text(title);
+                $('#details-description').text(description);
+                $('#details-img').attr('src', imgPath ? `./${imgPath}` : 'https://via.placeholder.com/1200x300');
+            }
+
+            const circles = $('.circle');
+            circles.each(function () {
+                $(this).on('click', function () {
+                    circles.removeClass('active');
+                    $(this).addClass('active');
+                    const title = $(this).data('title');
+                    const description = $(this).data('description');
+                    const imgPath = $(this).data('img');
+                    showDetails(title, description, imgPath);
+                });
+            });
+
+            // Initialize with the first circle active
+            if (circles.length > 0) {
+                $(circles[0]).addClass('active');
+                showDetails($(circles[0]).data('title'), $(circles[0]).data('description'), $(circles[0]).data('img'));
+            }
         });
     </script>
 </body>

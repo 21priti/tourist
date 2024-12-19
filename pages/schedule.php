@@ -43,6 +43,7 @@ foreach ($pids as $pid) {
                     </div>
                 <?php endforeach; ?>
             </div>
+            <?php include_once "footer.php"; ?>
         <?php else: ?>
             <p class="text-center">You have not purchased any packages yet.</p>
             <div class="fixed-bottom mt-5">
