@@ -105,7 +105,7 @@
             $image = $_FILES['image']['name'][$i];  
             $image_tmp_name = $_FILES['image']['tmp_name'][$i];
             $uploadDir = 'uploads/';
-            $new_name = time() . "-" . basename($image);
+            $new_name = "uploads/" .time() . "-" . basename($image);
             $upload_path = $uploadDir . $new_name;
             // print_r($_POST);
             if (move_uploaded_file($image_tmp_name, $upload_path)) {
