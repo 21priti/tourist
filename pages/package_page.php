@@ -124,7 +124,7 @@ $locations = getPackageLocations($packageId);
                     if (response.success) {
                         alert(response.message);
                     } else {
-                        alert(response.message || 'An error occurred.');
+                        alert(response.message || '');
                     }
                 },
                 error: function () {
