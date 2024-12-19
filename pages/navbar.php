@@ -60,17 +60,23 @@ $current_page = basename($_SERVER['PHP_SELF']); // Get the current script name
               </a>
             </li>
             <li class="nav-item px-3">
+              <a class="nav-link <?= $current_page == 'schedule.php' ? 'active' : '' ?>" href="<?php (isset($_SESSION['cid']))?print "schedule.php":print "login.php" ;?>">
+                <i class="fa-solid fa-calendar-check"></i> Schedule
+              </a>
+            </li>
+            <li class="nav-item px-3">
               <a class="nav-link <?= $current_page == 'contact.php' ? 'active' : '' ?>" href="contact.php">
                 <i class="fa-solid fa-headset"></i> Contact-Us
               </a>
             </li>
+            
           </ul>
         <?php } ?>
         <span class="navbar-text">
           <ul class="navbar-nav">
             <?php if (isset($_SESSION['cid'])) { ?>
               <li class="nav-item dropdown fw-bold">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                <a class="nav-link dropdown-toggle-d-none" href="#" role="button" data-bs-toggle="dropdown"
                   aria-expanded="false"><i class="bi bi-person-fill"></i>
                   Profile
                 </a>
@@ -82,7 +88,7 @@ $current_page = basename($_SERVER['PHP_SELF']); // Get the current script name
               </li>
             <?php } else { ?>
               <li class="nav-item dropdown fw-bold">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                <a class="nav-link dropdown-toggle-d-none" href="#" role="button" data-bs-toggle="dropdown"
                   aria-expanded="false"><i class="bi bi-person-fill"></i>
                   Log In/Register
                 </a>
