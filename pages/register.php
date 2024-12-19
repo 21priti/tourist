@@ -22,9 +22,9 @@
                     <div class="row">
                         <div class="col-md-12">
                         <div class="input-group">
-    <span class="input-group-text"><i class="fas fa-map-marker-alt"></i></span>
-    <input type="text" class="form-control" name="pname" placeholder="Enter the package location">
-</div>
+                            <span class="input-group-text"><i class="fas fa-map-marker-alt"></i></span>
+                        <input type="text" class="form-control" name="name" placeholder="Enter your name">
+                    </div>
 
                         </div>
                         <div class="mt-3">
