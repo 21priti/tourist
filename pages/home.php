@@ -55,40 +55,11 @@
      <!-- annimation added -->
     <div class="container my-4" data-aos="fade-up" data-aos-delay="100">
         <h1 class="text-center mb-4">Packages</h1>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="rowa card">
-                    <img src="../image/package1.jpg" class="card-image-top image-card" alt="" srcset="">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="../image/package2.jpg" class="card-image-top image-card" alt="" srcset="">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="../image/package3.jpg" class="card-image-top image-card" alt="" srcset="">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-            </div>
+        <div class="row" id="packages-container">
+            
         </div>
         <div class="text-center mt-3">
-            <button type="submit" class="btn btn-primary" value="See More">See More</button>
+            <a type="submit" class="btn btn-primary" herf="packages.php">See More</a>
         </div>
     </div>
 
@@ -97,7 +68,41 @@
     </div>
     
     <?php include_once "footer.php"?>
-
+    <script>
+        $(document).ready(function () {
+        // Fetch packages using AJAX
+            $.ajax({
+            url: 'fetch_packages.php',
+            method: 'GET',
+            success: function (data) {
+                try{
+                    data=JSON.parse(data);
+                    console.log(data);
+                }catch(error){
+                    console.log(error);
+                }
+                
+                let packagesHtml = '';
+                console.log("Packages fetched:", data);
+                for(let i=0; i<3; i++){
+                    packagesHtml += `
+                    <div class="col-md-4">
+                        <div class="card shadow-sm">
+                        <img class="card-img-top" src="./uploads/${data[i]['img_path']}" alt="Card image cap" style="height:300px;">
+                        <div class="card-body d-flex flex-column justify-content-between" style="height:300px;">
+                            <h5 class="card-title fw-bold">${data[i]['name']}</h5>
+                            <p class="card-text" style="text-align: justify;">${data[i]['des1']}</p>
+                            <a href="package_page.php?pid=${data[i]['package_id']}" class="btn btn-primary">See Detail</a>
+                        </div>
+                        </div>
+                    </div>
+                    `;
+                }
+                $('#packages-container').html(packagesHtml);
+            },
+            });
+        });
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
         AOS.init();
