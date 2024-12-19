@@ -36,7 +36,7 @@ $current_page = basename($_SERVER['PHP_SELF']); // Get the current script name
               </a>
             </li>
             <li class="nav-item px-3">
-              <a class="nav-link <?= $current_page == 'packages.php' ? 'active' : '' ?>" href="packages.php">
+              <a class="nav-link <?= $current_page == 'packages.php' ? 'active' : '' ?>" href="admin_package.php">
                 <i class="fa-solid fa-paper-plane"></i> Packages
               </a>
             </li>
