@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 17, 2024 at 03:04 PM
+-- Generation Time: Dec 19, 2024 at 02:38 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -41,19 +41,19 @@ CREATE TABLE `location` (
 --
 
 INSERT INTO `location` (`l_id`, `location_name`, `package_id`, `image`, `sequence`, `description`) VALUES
-(12, 'Agra Fort', 30, '1734442252', 1, 'Begin your Agra journey at Agra Fort, a historical marvel that stands as a testament to the grandeur of the Mughal Empire. This massive red sandstone fortress offers a glimpse into the city\'s rich history and the Mughal lifestyle. It also holds a deep con'),
-(13, 'Taj Mahal', 30, '1734442252', 2, 'The Taj Mahal, one of the Seven Wonders of the World, is best experienced during sunrise or sunset when its white marble façade reflects shades of gold, pink, or silver. Built by Emperor Shah Jahan in memory of his wife Mumtaz Mahal, this architectural ma'),
-(14, 'Fatehpur Sikri', 30, '1734442252', 3, 'On the second day, take a day trip to Fatehpur Sikri, a UNESCO World Heritage Site located slightly outside Agra. This abandoned Mughal city was built by Emperor Akbar and served as the capital of his empire for a brief period. Explore its well-preserved '),
-(15, 'Pangong Lake', 31, '1734443152', 1, 'Begin your journey with a visit to the mesmerizing Pangong Lake, famous for its pristine waters and vibrant blue hues. Nestled at an altitude of 4,350 meters, this iconic lake stretches across the borders of India and China. The tranquility of the lake, e'),
-(16, 'Nubra Valley', 31, '1734443152', 2, 'On the second day, explore the enchanting Nubra Valley, a region known for its striking desert landscapes and lush greenery. Visit the sand dunes of Hunder, where you can enjoy a camel ride on the unique double-humped Bactrian camels. Don’t miss Diskit Mo'),
-(17, 'Shanti Stupa', 31, '1734443152', 3, 'Conclude your trip with a visit to Shanti Stupa, a stunning white-domed Buddhist monument perched on a hilltop in Leh. This tranquil spot offers breathtaking panoramic views of Leh city and the surrounding mountains, particularly during sunrise or sunset.'),
-(18, 'Jagannath Temple', 32, '1734443521', 1, 'Begin your spiritual journey at the Jagannath Temple, one of the Char Dham pilgrimage sites. Dedicated to Lord Jagannath, it is an iconic symbol of devotion. Experience the grandeur of the temple\'s annual Rath Yatra and marvel at its intricate Kalinga-sty'),
-(19, 'Puri Beach', 32, '1734443521', 2, ' After seeking blessings at the temple, take a break at Puri Beach. Enjoy the soothing waves, local seafood, and perhaps a camel or horse ride along the shore. Witness the serene sunset to conclude your day.'),
-(20, 'Konark Sun Temple', 32, '1734443521', 3, 'Head to the Konark Sun Temple, a UNESCO World Heritage Site. This 13th-century architectural marvel is shaped like a massive chariot of the Sun God, complete with intricately carved wheels and sculptures depicting scenes of daily life, mythology, and art.'),
-(21, 'Hawa Mahal', 33, '1734444084', 1, 'Hawa Mahal, also known as the \"Palace of Winds,\" is an iconic structure in Jaipur, famous for its intricate latticework and unique honeycomb-like façade. Built in 1799 by Maharaja Sawai Pratap Singh, this five-story palace was designed to allow royal wome'),
-(22, 'Amber Fort', 33, '1734444084', 2, 'Located on a hilltop, Amber Fort is one of Jaipur’s most spectacular landmarks, offering a glimpse into Rajasthan\'s royal past. Constructed by Maharaja Man Singh I in the late 16th century, the fort is a fusion of Hindu and Mughal architectural styles, wi'),
-(23, 'City Palace', 33, '1734444084', 3, 'The City Palace is a magnificent palace complex located in the heart of Jaipur. Built by Maharaja Sawai Jai Singh II in the 18th century, it blends Mughal, Rajput, and European architectural styles. The palace houses several courtyards, gardens, and museu'),
-(24, ' Jantar Mantar', 33, '1734444084', 4, 'Jantar Mantar in Jaipur is an astronomical observatory that holds a collection of 19 architectural astronomical instruments built by Maharaja Jai Singh II in the 18th century. It is a UNESCO World Heritage Site and one of the largest observatories of its ');
+(12, 'Agra Fort', 30, 'uploads\\1734255426_agra1.webp', 1, 'Begin your Agra journey at Agra Fort, a historical marvel that stands as a testament to the grandeur of the Mughal Empire. This massive red sandstone fortress offers a glimpse into the city\'s rich history and the Mughal lifestyle. It also holds a deep con'),
+(13, 'Taj Mahal', 30, 'uploads\\1734255426_agra2.jpg', 2, 'The Taj Mahal, one of the Seven Wonders of the World, is best experienced during sunrise or sunset when its white marble façade reflects shades of gold, pink, or silver. Built by Emperor Shah Jahan in memory of his wife Mumtaz Mahal, this architectural ma'),
+(14, 'Fatehpur Sikri', 30, 'uploads\\1734255426_agra4.jpg', 3, 'On the second day, take a day trip to Fatehpur Sikri, a UNESCO World Heritage Site located slightly outside Agra. This abandoned Mughal city was built by Emperor Akbar and served as the capital of his empire for a brief period. Explore its well-preserved '),
+(15, 'Pangong Lake', 31, 'uploads\\1734256463_leh1.avif', 1, 'Begin your journey with a visit to the mesmerizing Pangong Lake, famous for its pristine waters and vibrant blue hues. Nestled at an altitude of 4,350 meters, this iconic lake stretches across the borders of India and China. The tranquility of the lake, e'),
+(16, 'Nubra Valley', 31, 'uploads\\1734256463_leh2.avif', 2, 'On the second day, explore the enchanting Nubra Valley, a region known for its striking desert landscapes and lush greenery. Visit the sand dunes of Hunder, where you can enjoy a camel ride on the unique double-humped Bactrian camels. Don’t miss Diskit Mo'),
+(17, 'Shanti Stupa', 31, 'uploads\\1734256463_leh4.webp', 3, 'Conclude your trip with a visit to Shanti Stupa, a stunning white-domed Buddhist monument perched on a hilltop in Leh. This tranquil spot offers breathtaking panoramic views of Leh city and the surrounding mountains, particularly during sunrise or sunset.'),
+(18, 'Jagannath Temple', 32, 'uploads\\1734256993_puri1.webp', 1, 'Begin your spiritual journey at the Jagannath Temple, one of the Char Dham pilgrimage sites. Dedicated to Lord Jagannath, it is an iconic symbol of devotion. Experience the grandeur of the temple\'s annual Rath Yatra and marvel at its intricate Kalinga-sty'),
+(19, 'Puri Beach', 32, 'uploads\\1734256993_puri3.webp', 2, ' After seeking blessings at the temple, take a break at Puri Beach. Enjoy the soothing waves, local seafood, and perhaps a camel or horse ride along the shore. Witness the serene sunset to conclude your day.'),
+(20, 'Konark Sun Temple', 32, 'uploads\\1734256993_puri2.webp', 3, 'Head to the Konark Sun Temple, a UNESCO World Heritage Site. This 13th-century architectural marvel is shaped like a massive chariot of the Sun God, complete with intricately carved wheels and sculptures depicting scenes of daily life, mythology, and art.'),
+(21, 'Hawa Mahal', 33, 'uploads\\1734256060_jaipur1.avif', 1, 'Hawa Mahal, also known as the \"Palace of Winds,\" is an iconic structure in Jaipur, famous for its intricate latticework and unique honeycomb-like façade. Built in 1799 by Maharaja Sawai Pratap Singh, this five-story palace was designed to allow royal wome'),
+(22, 'Amber Fort', 33, 'uploads\\1734256060_jaipur2.avif', 2, 'Located on a hilltop, Amber Fort is one of Jaipur’s most spectacular landmarks, offering a glimpse into Rajasthan\'s royal past. Constructed by Maharaja Man Singh I in the late 16th century, the fort is a fusion of Hindu and Mughal architectural styles, wi'),
+(23, 'City Palace', 33, 'uploads\\1734256060_jaipur3.avif', 3, 'The City Palace is a magnificent palace complex located in the heart of Jaipur. Built by Maharaja Sawai Jai Singh II in the 18th century, it blends Mughal, Rajput, and European architectural styles. The palace houses several courtyards, gardens, and museu'),
+(24, ' Jantar Mantar', 33, 'uploads\\1734256060_jaipur4.avif', 4, 'Jantar Mantar in Jaipur is an astronomical observatory that holds a collection of 19 architectural astronomical instruments built by Maharaja Jai Singh II in the 18th century. It is a UNESCO World Heritage Site and one of the largest observatories of its ');
 
 -- --------------------------------------------------------
 
@@ -251,19 +251,19 @@ ALTER TABLE `travel_price`
 -- AUTO_INCREMENT for table `location`
 --
 ALTER TABLE `location`
-  MODIFY `l_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `l_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
 
 --
 -- AUTO_INCREMENT for table `package`
 --
 ALTER TABLE `package`
-  MODIFY `package_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+  MODIFY `package_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
 
 --
 -- AUTO_INCREMENT for table `picture`
 --
 ALTER TABLE `picture`
-  MODIFY `img_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `img_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
 -- AUTO_INCREMENT for table `register`

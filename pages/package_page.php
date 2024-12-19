@@ -4,13 +4,13 @@
 require_once '../databasefunction/dbconnect.php';
 global $conn;
 
-// Fetch the package ID and name
-$packageName = $_GET['pid']; // Assuming pname is passed in the URL
+// Fetch the package ID from the URL
+$packageId = $_GET['pid']; // Assuming pid is passed in the URL
 
 // Fetch package details (name, price, descriptions)
 $packageQuery = "SELECT name, price, des1, des2, des3 FROM package WHERE package_id = ?";
 $packageStmt = $conn->prepare($packageQuery);
-$packageStmt->bind_param('s', $packageName);
+$packageStmt->bind_param('s', $packageId);
 $packageStmt->execute();
 $packageResult = $packageStmt->get_result();
 
@@ -20,9 +20,9 @@ if ($packageResult->num_rows > 0) {
 }
 
 // Fetch images for the package
-$query = "SELECT img_path FROM picture WHERE package_name = (select name from package where package_id = ?)";
+$query = "SELECT img_path FROM picture WHERE package_name = (SELECT name FROM package WHERE package_id = ?)";
 $stmt = $conn->prepare($query);
-$stmt->bind_param('s', $packageName);
+$stmt->bind_param('s', $packageId);
 $stmt->execute();
 $result = $stmt->get_result();
 
@@ -36,7 +36,7 @@ if ($result->num_rows > 0) {
 // Fetch locations for the package
 $locationQuery = "SELECT location_name, description, image FROM location WHERE package_id = ?";
 $locationStmt = $conn->prepare($locationQuery);
-$locationStmt->bind_param('s', $packageName);
+$locationStmt->bind_param('s', $packageId);
 $locationStmt->execute();
 $locationResult = $locationStmt->get_result();
 
@@ -82,13 +82,13 @@ if ($locationResult->num_rows > 0) {
     </div>
 
     <!-- Main Content -->
-    <div class="fs-1 fw-bold text-center"><?php echo $packageDetails['name'];?></div>
+    <div class="fs-1 fw-bold text-center"><?php echo htmlspecialchars($packageDetails['name']); ?></div>
     <div class="container mx-5 px-5 row">
         <!-- Flowchart -->
         <div class="flowchart my-5 p-5 col-md-4" id="flowchart">
             <div style="height: 20px;"></div>
             <?php foreach ($locations as $index => $location): ?>
-                <div class="circle" data-title="<?php echo htmlspecialchars($location['location_name']); ?>" data-description="<?php echo htmlspecialchars($location['description']); ?>" data-img="<?php echo htmlspecialchars($location['image']); ?>" data-price="<?php echo htmlspecialchars($packageDetails['price']); ?>">
+                <div class="circle" data-title="<?php echo htmlspecialchars($location['location_name']); ?>" data-description="<?php echo htmlspecialchars($location['description']); ?>" data-img="<?php echo htmlspecialchars($location['image']); ?>">
                     <?php echo htmlspecialchars($location['location_name']); ?>
                 </div>
                 <?php if ($index < count($locations) - 1): ?>
@@ -103,7 +103,6 @@ if ($locationResult->num_rows > 0) {
             <img id="details-img" src="" alt="Location Image" class="img-fluid">
             <h3 id="details-title">Place 1</h3>
             <p id="details-description">Description for Place 1.</p>
-            <div id="details-price">Price: </div>
         </div>
     </div>
 
@@ -111,14 +110,14 @@ if ($locationResult->num_rows > 0) {
     <div class="container mx-5 px-5 mt-5 mb-3">
         <div class="row w-100 mt-5">
             <div class="col-md-8">
-                <h1 id="add-to-cart-location">Location</h1>
-                <p id="add-to-cart-description">Description</p>
+                <h1 id="add-to-cart-title"><?php echo htmlspecialchars($packageDetails['name']); ?></h1>
+                <p id="add-to-cart-description"><?php echo htmlspecialchars($packageDetails['des1']); ?></p>
             </div>
             <div class="col-md-4">
                 <div class="card mx-auto" style="max-width: 600px;">
-                    <img id="add-to-cart-img" src="../image/bg1.jpg" alt="logo" srcset="" class="img-fluid">
+                    <img id="add-to-cart-img" src="<?php echo !empty($images) ? './uploads/' . htmlspecialchars($images[0]) : 'https://via.placeholder.com/1200x300'; ?>" alt="logo" class="img-fluid">
                     <div class="card-body text-center">
-                        <div class="mb-2 fs-4" id="add-to-cart-price">Price: 1000 Rs/-</div>
+                        <div class="mb-2 fs-4" id="add-to-cart-price">Price: <?php echo htmlspecialchars($packageDetails['price']); ?> Rs/-</div>
                         <button class="btn btn-primary" id="add-to-cart-btn">Buy</button>
                     </div>
                 </div>
@@ -131,11 +130,10 @@ if ($locationResult->num_rows > 0) {
     <!-- Scripts -->
     <script>
         // Function to update the details section
-        function showDetails(title, description, imgPath, price) {
+        function showDetails(title, description, imgPath) {
             document.getElementById('details-title').innerText = title;
             document.getElementById('details-description').innerText = description;
-            document.getElementById('details-img').src = imgPath ? `./uploads/${imgPath}` : 'https://via.placeholder.com/1200x300'; // Default image if none exists
-            document.getElementById('details-price').innerText = `Price: ${price} Rs/-`;
+            document.getElementById('details-img').src = imgPath ? `./${imgPath}` : 'https://via.placeholder.com/1200x300';
         }
 
         // Add click functionality to each circle
@@ -147,34 +145,20 @@ if ($locationResult->num_rows > 0) {
                 const title = circle.dataset.title;
                 const description = circle.dataset.description;
                 const imgPath = circle.dataset.img;
-                const price = circle.dataset.price;
 
-                showDetails(title, description, imgPath, price);
-
-                // Update the Add to Cart Section
-                document.getElementById('add-to-cart-location').innerText = title;
-                document.getElementById('add-to-cart-description').innerText = description;
-                document.getElementById('add-to-cart-img').src = imgPath ? `./uploads/${imgPath}` : 'https://via.placeholder.com/1200x300';
-                document.getElementById('add-to-cart-price').innerText = `Price: ${price} Rs/-`;
+                showDetails(title, description, imgPath);
             });
         });
 
         // Initialize with the first circle active
         if (circles.length > 0) {
             circles[0].classList.add('active');
-            showDetails(circles[0].dataset.title, circles[0].dataset.description, circles[0].dataset.img, circles[0].dataset.price);
-
-            // Also initialize the Add to Cart Section with the first location
-            document.getElementById('add-to-cart-location').innerText = circles[0].dataset.title;
-            document.getElementById('add-to-cart-description').innerText = circles[0].dataset.description;
-            document.getElementById('add-to-cart-img').src = circles[0].dataset.img ? `./uploads/${circles[0].dataset.img}` : 'https://via.placeholder.com/1200x300';
-            document.getElementById('add-to-cart-price').innerText = `Price: ${circles[0].dataset.price} Rs/-`;
+            showDetails(circles[0].dataset.title, circles[0].dataset.description, circles[0].dataset.img);
         }
 
         // Add to Cart button functionality
         document.getElementById('add-to-cart-btn').addEventListener('click', () => {
-            const title = document.getElementById('add-to-cart-location').innerText;
-            alert(`${title} has been added to your cart!`);
+            alert('<?php echo htmlspecialchars($packageDetails['name']); ?> has been added to your cart!');
         });
     </script>
 </body>
