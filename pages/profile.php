@@ -12,10 +12,9 @@
         </div>
         <div class="card-body">
             <div class="profile-pic-container">
-                <img src="../image/user.jpg" alt="Profile Picture" class="profile-pic">
+                <img src="../databasefunction/user_images/<?php (isset($_SESSION['profile_pic']))?print $_SESSION['profile_pic']:print "user.jpg" ;?>" alt="Profile Picture" class="profile-pic">
                 <i class="bi bi-pencil profile-pic-edit" title="Edit Profile Picture"
                     onclick="document.getElementById('profilePicInput').click();"></i>
-                <!-- Hidden file input for uploading profile picture -->
                 <input type="file" id="profilePicInput" style="display: none;" onchange="uploadProfilePic(event)">
             </div>
             <div class="row mt-3 mx-auto text-start">
@@ -28,13 +27,13 @@
                             <div class="mb-3">
                                 <label for="email" class="form-label">Email</label>
                                 <input type="email" class="form-control" id="email" name="email"
-                                    value="johndoe@example.com" readonly>
+                                    value=<?php (isset($_SESSION['email']))?print $_SESSION['email']:print "email" ;?> readonly>
                             </div>
                             <div class="mb-3">
                                 <label for="phone" class="form-label">Phone</label>
                                 <div class="input-group">
                                     <input type="text" class="form-control" id="phone" name="phone"
-                                        value="+1 123 456 7890" readonly>
+                                        value=<?php (isset($_SESSION['phone']))?print $_SESSION['phone']:print "User phone" ;?> readonly>
                                     <span class="input-group-text">
                                         <i class="bi bi-pencil-square edit-icon" onclick="toggleEditable('phone')"
                                             title="Edit Phone"></i>
