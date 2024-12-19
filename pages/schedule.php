@@ -23,6 +23,7 @@ foreach ($pids as $pid) {
 ?>
 
 <body>
+    <div style="height: 40px;"></div>
     <div class="container mt-5">
         <h1 class="text-center mb-4 fw-bold bg-warning border border-2">Your Purchased Packages</h1>
         <?php if (!empty($packages)): ?>
@@ -33,17 +34,21 @@ foreach ($pids as $pid) {
                             <div class="card-body">
                                 <h3 class="card-title"><?php echo htmlspecialchars($package['name']); ?></h3>
                                 <p class="card-text">
-                                    <strong>Price:</strong> <?php echo htmlspecialchars($package['price']); ?> Rs/-<br>
-                                    <strong>Description 1:</strong> <?php echo htmlspecialchars($package['des1']); ?><br>
-                                    <strong>Description 2:</strong> <?php echo htmlspecialchars($package['des2']); ?><br>
-                                    <strong>Description 3:</strong> <?php echo htmlspecialchars($package['des3']); ?><br>
+                                    <strong>Price:</strong><?php echo htmlspecialchars($package['price']); ?> Rs/-<br>
+                                    <strong>Description:</strong> <br><?php echo htmlspecialchars($package['des1']); ?><br>
+                                    <?php echo htmlspecialchars($package['des2']); ?><br>
+                                    <?php echo htmlspecialchars($package['des3']); ?><br>
                                 </p>
                             </div>
                         </div>
                     </div>
                 <?php endforeach; ?>
             </div>
-            <?php include_once "footer.php"; ?>
+    </div>
+    <div class="mt-5">
+    <?php include_once "footer.php"; ?>
+    </div>
+            
         <?php else: ?>
             <p class="text-center">You have not purchased any packages yet.</p>
             <div class="fixed-bottom mt-5">
