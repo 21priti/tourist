@@ -29,7 +29,7 @@
                     <div class="col-md-6">
                         <div class="card shadow-lg border-0">
                             <!-- Package Image -->
-                            <img class="card-img-top rounded-top" src="./uploads/${data[i]['img_path']}" alt="Package Image" style="height:300px; object-fit:cover;">
+                            <img class="card-img-top rounded-top" src="./uploads/${data[i]['img_path']}" alt="Package Image" style="height:400px; object-fit:cover;">
 
                             <div class="card-body" style="height: auto; padding: 1.5rem;">
                                 <h4 class="card-title fw-bold text-primary">${data[i]['name']}</h4>
@@ -63,7 +63,9 @@
                                 </div>
                                 <p class="fw-bold text-danger fs-4 mt-4">Price: ₹${data[i]['price']}</p>
                                 <a href="package_page.php?pid=${data[i]['package_id']}" class="btn btn-outline-primary w-100 fw-bold">See Details</a>
-                            </div>
+
+                                <a href="package_update.php?pid=${data[i]['package_id']}" class="btn btn-outline-primary w-100 fw-bold mt-2">Edit Details</a>
+                                </div>
                         </div>
                     </div>
 
