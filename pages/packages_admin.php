@@ -63,7 +63,7 @@
                                 </div>
                                 <p class="fw-bold text-danger fs-4 mt-4">Price: ₹${data[i]['price']}</p>
                                 <a href="package_page.php?pid=${data[i]['package_id']}" class="btn btn-outline-primary w-100 fw-bold">See Details</a>
-            
+                                <a href="package_update.php?pid=${data[i]['package_id']}" class="btn btn-outline-primary w-100 fw-bold mt-2">Edit Details</a>
                                 </div>
                         </div>
                     </div>

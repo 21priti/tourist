@@ -176,7 +176,7 @@ $result = getId($id);
                 ?>
     <script>
         alert("Package succesfully updated");
-        window.location = "packages.php";
+        window.location = "packages_admin.php";
     </script>
     <?php
             } else {

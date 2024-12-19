@@ -10,7 +10,7 @@
             </div>
             <div class="col-md-6">
                 <div class="bg-success p-5 text-center rounded-5">
-                    <a class="fs-1 text-decoration-none text-dark" href="packages.php">Update Package</a>
+                    <a class="fs-1 text-decoration-none text-dark" href="packages_admin.php">Update Package</a>
                 </div>
             </div>
         </div>
