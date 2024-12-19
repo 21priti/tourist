@@ -108,6 +108,31 @@
             } 
             
         }
-
+        
+        function getUserSubscriptions($cid) {
+            global $conn;
+            $query = "SELECT pid FROM subscription WHERE cid = ?";
+            $stmt = $conn->prepare($query);
+            $stmt->bind_param('i', $cid);
+            $stmt->execute();
+            $result = $stmt->get_result();
+            $pids = [];
+            while ($row = $result->fetch_assoc()) {
+                $pids[] = $row['pid'];
+            }
+            return $pids;
+        }
+        
+        function getPackageDetails($pid) {
+            global $conn;
+            $query = "SELECT name, price, des1, des2, des3 FROM package WHERE package_id = ?";
+            $stmt = $conn->prepare($query);
+            $stmt->bind_param('i', $pid);
+            $stmt->execute();
+            $result = $stmt->get_result();
+            return $result->fetch_assoc();
+        }
+        ?>
+        
         
 ?>
