@@ -1,7 +1,7 @@
 <?php
 require_once "../databasefunction/dbconnect.php";
 global $conn;
-$query = "SELECT p.package_id, p.name, p.price, p.des1, p.rating, p.no_places, (SELECT img_path FROM picture WHERE picture.package_name = p.name LIMIT 1 ) AS img_path FROM package p";
+$query = "SELECT p.package_id, p.name, p.price, p.des1,p.starting_place,p.ending_place,p.days,p.travel_by, p.rating, p.no_places, (SELECT img_path FROM picture WHERE picture.package_name = p.name LIMIT 1 ) AS img_path FROM package p";
 $stmt = $conn->prepare($query);
 $res=$stmt->execute();
 

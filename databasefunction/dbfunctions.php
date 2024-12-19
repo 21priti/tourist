@@ -72,7 +72,7 @@
             try{
                 $qry="INSERT INTO location(location_name,package_id,image,sequence,description) values(?,?,?,?,?)";
                 $stmt = $conn->prepare($qry);
-                $stmt->bind_param("siiss", $location_name,$package_id,$new_name,$sequence,$des);
+                $stmt->bind_param("sisss", $location_name,$package_id,$new_name,$sequence,$des);
                 $res = $stmt->execute();
                 if(!$res){
                     echo $conn->error;

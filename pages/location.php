@@ -104,15 +104,16 @@
             $des=$_POST['des1'][$i];
             $image = $_FILES['image']['name'][$i];  
             $image_tmp_name = $_FILES['image']['tmp_name'][$i];
-            $new_name = time() . "-" . basename($image);
-            $upload_path = "./uploads/" . $new_name;
-            print_r($_POST);
+            $uploadDir = 'uploads/';
+            $new_name = "uploads/" .time() . "-" . basename($image);
+            $upload_path = $uploadDir . $new_name;
+            // print_r($_POST);
             if (move_uploaded_file($image_tmp_name, $upload_path)) {
                 $res=location($location_name,$pid,$sequence,$des,$new_name);
                 if($res){
                     ?>
     <script>
-        alert("You can login now");
+        alert("location added succesfully");
         window.location = "package_form.php";
     </script>
     <?php
