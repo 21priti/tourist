@@ -55,6 +55,7 @@
             $_SESSION['phone']=$res['phone'];
             $_SESSION['gender']=$res['gender'];
             $_SESSION['password']=$res['password'];
+            $_SESSION['profile_pic']=$res['profile_pic'];
             ?>
                 <script>
                     window.location = "home.php";
